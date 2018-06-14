@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="0dp">
+    
+    <include
+          android:id="@+id/commontitlebar"  
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          layout="@layout/view_common_titlebar" /> 
+          
+    <LinearLayout
+        android:id="@+id/toServerInformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+    	
+        <RelativeLayout
+            android:id="@+id/layout_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+    		<ImageView
+    		    android:id="@+id/img_user"
+    		    android:layout_width="32dp"
+    		    android:layout_height="32dp"
+    		    android:layout_centerVertical="true"
+    		    android:layout_marginLeft="2dp"
+    		    android:src="@drawable/smp_user"
+    		    android:text="@string/register_username" 
+    		    android:layout_alignParentLeft="true"
+    		    android:contentDescription="@null"/>
+
+    		<EditText
+        		android:id="@+id/edtUserName"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:background="@null"
+        		android:layout_marginLeft="10dp"
+        		android:layout_toLeftOf="@+id/image_delname"
+        		android:layout_toRightOf="@+id/img_user"        		
+        		android:ems="10"
+        		android:maxLength="12"
+        		android:hint="@string/register_username"
+        		android:singleLine="true"
+        		android:textColor="@color/black"
+        		android:textSize="@dimen/text_size_larsamll"
+        		android:layout_centerVertical="true"
+        		android:textCursorDrawable="@null"/>
+			<ImageView
+            	android:id="@+id/image_delname" 
+    		    android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+            	android:src="@drawable/smp_input_delete"
+            	android:contentDescription="@null"
+            	android:layout_centerVertical="true"
+            	android:layout_alignParentRight="true"
+            	android:layout_marginRight="2dp" 
+            	android:visibility="visible"/>        	     
+        </RelativeLayout> 
+        
+	    <ImageView
+	        android:layout_width="match_parent"
+	        android:layout_height="0.5dp"
+	        android:layout_marginTop="5dp"
+	        android:background="@color/alertdialog_line"/>        	
+    	     
+
+    	<RelativeLayout
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="10dp">
+
+    		<ImageView
+    		    android:id="@+id/img_Pwd"
+    		    android:layout_width="32dp"
+        		android:layout_height="32dp"
+        		android:text="@string/register_username"
+        		android:layout_marginLeft="2dp"
+        		android:layout_centerVertical="true"
+        		android:layout_alignParentLeft="true"
+        		android:src="@drawable/smp_user_pwd"
+        		android:contentDescription="@null"/>
+
+    		<EditText
+        		android:id="@+id/edtPwd"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:background="@null"
+        		android:layout_marginLeft="10dp"
+        		android:ems="10"
+        		android:maxLength="12"
+        		android:layout_toLeftOf="@+id/image_delpwd"
+        		android:layout_toRightOf="@+id/img_Pwd"          		
+        		android:hint="@string/register_pwd"
+        		android:singleLine="true"
+        		android:textColor="@color/black"
+        		android:textCursorDrawable="@null"
+        		android:textSize="@dimen/text_size_larsamll"
+        		android:layout_centerVertical="true"
+        		android:inputType="textPassword"/>
+			<ImageView
+            	android:id="@+id/image_delpwd" 
+    		    android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+            	android:src="@drawable/smp_input_delete"
+            	android:contentDescription="@null"
+            	android:layout_centerVertical="true"
+            	android:layout_alignParentRight="true"
+            	android:layout_marginRight="2dp" 
+            	android:visibility="visible"/>    		
+    	</RelativeLayout>
+    	
+	    <ImageView
+	        android:layout_width="match_parent"
+	        android:layout_height="0.5dp"
+	        android:layout_marginTop="5dp"
+	        android:background="@color/alertdialog_line"/>       	
+    
+    	<RelativeLayout
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+      		android:layout_marginTop="5dp">
+			
+    		<ImageView
+    		    android:id="@+id/img_confirmPwd"
+    		    android:layout_width="32dp"
+        		android:layout_height="32dp"
+        		android:text="@string/register_username"
+        		android:layout_marginLeft="2dp"
+        		android:layout_gravity="center"
+        		android:src="@drawable/smp_user_pwd"
+        		android:layout_alignParentLeft="true"
+        		android:layout_centerVertical="true"
+        		android:contentDescription="@null"/>
+
+    		<EditText
+        		android:id="@+id/edtConfirmPwd"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:background="@null"
+        		android:layout_marginLeft="10dp"
+        		android:ems="10"
+        		android:maxLength="12"
+        		android:layout_toLeftOf="@+id/image_delconfirmpwd"
+        		android:layout_toRightOf="@+id/img_confirmPwd"          		
+        		android:hint="@string/register_confirmpwd"
+        		android:singleLine="true"
+        		android:textColor="@color/black"
+        		android:textCursorDrawable="@null"
+        		android:textSize="@dimen/text_size_larsamll"
+        		android:layout_centerVertical="true"
+        		android:inputType="textPassword" />
+			<ImageView
+            	android:id="@+id/image_delconfirmpwd" 
+    		    android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+            	android:src="@drawable/smp_input_delete"
+            	android:contentDescription="@null"
+            	android:layout_centerVertical="true"
+            	android:layout_alignParentRight="true"
+            	android:layout_marginRight="2dp" 
+            	android:visibility="visible"/>     		
+   		</RelativeLayout> 
+   		
+	    <ImageView
+	        android:layout_width="match_parent"
+	        android:layout_height="0.5dp"
+	        android:layout_marginTop="5dp"
+	        android:background="@color/alertdialog_line"/>       	
+    
+    	<RelativeLayout
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" 
+        	android:layout_marginTop="5dp">
+    		<ImageView
+    		    android:id="@+id/image_email" 
+    		    android:layout_width="32dp"
+        		android:layout_height="32dp"
+        		android:text="@string/register_username"
+        		android:layout_marginLeft="2dp"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/smp_email"
+        		android:contentDescription="@null"/>
+
+    		<EditText
+        		android:id="@+id/edtEmail"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:background="@null"
+        		android:layout_marginLeft="10dp"
+        		android:layout_toLeftOf="@+id/image_delemail"
+        		android:layout_toRightOf="@+id/image_email"        		
+        		android:ems="10"
+        		android:singleLine="true"
+        		android:hint="@string/register_email"
+        		android:textColor="@color/black"
+        		android:textCursorDrawable="@null"
+        		android:layout_centerVertical="true"
+        		android:textSize="@dimen/text_size_larsamll"
+        		android:inputType="textEmailAddress" />
+			<ImageView
+            	android:id="@+id/image_delemail" 
+    		    android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+            	android:src="@drawable/smp_input_delete"
+            	android:contentDescription="@null"
+            	android:layout_centerVertical="true"
+            	android:layout_alignParentRight="true"
+            	android:layout_marginRight="2dp" 
+            	android:visibility="visible"/>     		
+    	</RelativeLayout> 
+    	
+	    <ImageView
+	        android:layout_width="match_parent"
+	        android:layout_height="0.5dp"
+	        android:layout_marginTop="5dp"
+	        android:background="@color/alertdialog_line"/>   
+	        
+		<Button
+      		android:id="@+id/register_ok"
+       		android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+       		android:layout_marginTop="20dp" 
+       		android:layout_gravity="center"
+       		android:text="@string/smartplug_ok" 
+       		android:textColor="@color/white"
+       		android:textSize="@dimen/text_size_larsamll"
+       		android:background="@drawable/btn_selector" />	    			
+   	 
+    </LinearLayout> 
+</LinearLayout>

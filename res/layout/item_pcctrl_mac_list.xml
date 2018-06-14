@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content" 
+    android:background="@drawable/common_list_selector"
+    android:paddingTop="10dp">  
+  
+    <TextView
+        android:id="@+id/tv_pc_mac"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/smp_plug_small"
+        android:contentDescription="@null"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp" />
+
+	<TextView
+	    android:id="@+id/tv_pc_online"
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent"
+	    android:layout_marginLeft="20dp"
+	    android:layout_toRightOf="@+id/tv_pc_mac"
+	    android:contentDescription="@null"
+	    android:scaleType="centerInside"
+	    android:src="@drawable/smp_plug_small"
+	    android:textColor="@color/black" />
+	
+	<com.thingzdo.util.ThingzdoCheckBox
+	    android:id="@+id/cb_pc_mac"
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent"
+	    android:layout_alignParentRight="true"
+	    android:gravity="center"
+	    android:text="@null"
+	    android:textColor="@color/black"
+	    android:textSize="@dimen/text_size_large" />
+
+  
+</RelativeLayout> 

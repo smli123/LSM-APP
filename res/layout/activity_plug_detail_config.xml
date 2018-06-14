@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="15dp"
+       android:layout_marginRight="15dp"
+       android:layout_marginTop="5dp"
+       android:gravity="center_vertical"
+       android:orientation="horizontal" >
+
+      <TextView
+          android:layout_width="90dp"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="2dp"
+          android:text="@string/add_plug_mac"
+          android:textColor="@color/black"
+          android:textSize="@dimen/text_size_norsamll" />
+
+      <EditText
+          android:id="@+id/plug_mac"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginLeft="2dp"
+          android:layout_weight="4"
+          android:background="@null"
+          android:ems="10"
+          android:enabled="false"
+          android:maxLength="20"
+          android:singleLine="true"
+          android:textColor="@color/black"
+          android:textCursorDrawable="@null"
+          android:textSize="@dimen/text_size_norsamll" />
+    
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+   
+	    <TextView
+	         android:id="@+id/tv_protocal_info"
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:layout_marginLeft="2dp"
+	         android:textColor="@color/black"
+	         android:text="@string/protocol_config"
+	         android:textSize="@dimen/text_size_norsamll" />
+	   
+	    <RadioGroup
+	        android:id="@+id/rg_tcp_udp"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="2dp"
+	        android:layout_marginTop="5dp"
+	        android:orientation="horizontal" >
+		     
+		   <RadioButton
+		       android:id="@+id/rb_tcp"
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:text="@string/protocol_tcp" />
+		
+		   <RadioButton
+		       android:id="@+id/rb_udp"
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:text="@string/protocol_udp" />
+		</RadioGroup>
+	</LinearLayout>
+	<ImageView
+    	android:layout_width="match_parent"
+    	android:layout_height="1dp"
+    	android:background="@color/lightwhite"	  
+    	android:contentDescription="@null"  
+	    />
+	
+</LinearLayout>

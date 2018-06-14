@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/white">
+
+      
+    <RelativeLayout
+        android:id="@+id/lay_plug_whole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+   	 	android:layout_centerVertical="true"  
+    	android:background="@drawable/common_list_selector"
+    	android:paddingTop="5dp" 
+   		android:paddingBottom="5dp"  	 	          
+        android:gravity="center" >
+        
+        
+	    <RelativeLayout
+	        android:id="@+id/plug_lay_delete"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	    	android:layout_alignParentLeft="true"
+	   	 	android:layout_centerVertical="true"  
+	        android:gravity="center" >
+	
+		<ImageView
+            android:id="@+id/plug_img_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+            android:src="@drawable/smp_plug_small"
+            android:contentDescription="@null"
+            android:scaleType="centerInside" />
+	    </RelativeLayout>        
+        
+        
+        
+        
+	    <RelativeLayout
+	        android:id="@+id/plug_lay_arrow"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_alignParentRight="true"
+	   	 	android:layout_centerVertical="true"
+	   	 	android:layout_marginRight="5dp"
+	   	 	android:layout_marginLeft="5dp"            
+	        android:gravity="center" >
+	
+	        <ImageView
+	            android:id="@+id/plug_img_more"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/smp_more"
+	            android:contentDescription="@null"
+	            android:scaleType="centerInside" />
+	        
+	        <ImageView
+	            android:id="@+id/plug_img_enabled"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/smp_switcher_open"
+	            android:contentDescription="@null"
+	            android:visibility="gone"
+	            android:scaleType="centerInside" />	        
+	    </RelativeLayout>
+	
+	
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="@dimen/listitem_user_icon_vertial_padding"
+	        android:layout_toLeftOf="@+id/plug_lay_arrow"
+	        android:layout_toRightOf="@+id/plug_lay_delete">
+	
+	        <RelativeLayout
+	            android:id="@+id/lay_txt_name"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content" >
+	            
+		        <TextView
+		            android:id="@+id/img_timer_start"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:gravity="center"
+		            android:layout_alignParentLeft="true"
+		            android:background="@drawable/smp_timer_start_back"
+		            android:text="@string/timer_task_timer_start"
+		            android:textColor="@color/white"
+		            android:textSize="@dimen/text_size_samll" />	            
+	            
+	            <TextView
+	                android:id="@+id/txtTaskTimerBegin"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:layout_marginLeft="2dp"
+	                android:focusable="false"
+	                android:singleLine="true"
+	                android:text="@null"
+	                android:textColor="@color/black"
+	                android:textIsSelectable="false"
+	                android:layout_toRightOf="@+id/img_timer_start"
+	                android:textSize="@dimen/text_size_midnormal" />
+	            
+		        <TextView
+		            android:id="@+id/img_timer_stop"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:gravity="center"
+		            android:background="@drawable/smp_timer_stop_back"
+		            android:text="@string/timer_task_timer_stop"
+		            android:textColor="@color/white"
+		            android:textSize="@dimen/text_size_samll"
+		            android:layout_marginLeft="10dp"
+		            android:layout_toRightOf="@+id/txtTaskTimerBegin"/>	 	            
+	            
+	            <TextView
+	                android:id="@+id/txtTaskTimerEnd"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:focusable="false"
+	                android:layout_marginLeft="2dp"
+	                android:singleLine="true"
+	                android:layout_toRightOf="@+id/img_timer_stop"
+	                android:text="@null"
+	                android:textColor="@color/black"
+	                android:textIsSelectable="false"
+	                android:textSize="@dimen/text_size_midnormal" />	
+            
+	        </RelativeLayout>
+	
+	        <RelativeLayout
+	            android:id="@+id/calllog_item_info_layout2"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@+id/lay_txt_name"
+	            android:focusable="false" >
+	
+	            <TextView
+	                android:id="@+id/txtTimerPeriod"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentTop="true"
+	                android:layout_marginLeft="5dp"
+	                android:focusable="false"
+	                android:singleLine="true"
+	                android:text="@null"
+	                android:textColor="@color/black"
+	                android:textIsSelectable="false"
+	                android:textSize="@dimen/text_size_samll" />
+
+	            <TextView
+	                android:id="@+id/txtTimerPCMac"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentTop="true"
+	                android:layout_marginLeft="5dp"
+	                android:layout_toRightOf="@id/txtTimerPeriod"
+	                android:focusable="false"
+	                android:singleLine="true"
+	                android:text="@null"
+	                android:textColor="@color/black"
+	                android:textIsSelectable="false"
+	                android:textSize="@dimen/text_size_samll" />
+
+	        </RelativeLayout>
+	    </RelativeLayout>
+	</RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/commom_bg_color">
+    
+    <include
+          android:id="@+id/commontitlebar"  
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          layout="@layout/view_common_titlebar"
+          android:layout_alignParentTop="true"/>   
+          
+    <RelativeLayout
+        android:id="@+id/rl_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commontitlebar"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"        
+        android:background="@color/commom_bg_color"
+        android:layout_gravity="center">
+            
+	    <LinearLayout
+	        android:id="@+id/ll_show_info"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical">
+		    
+		    <LinearLayout
+			    android:id="@+id/ll_cur_temp"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+			
+				<TextView
+				    android:layout_width="100dp"
+				    android:layout_height="wrap_content"
+				    android:text="当前温度："
+				    android:textColor="@color/black"/>
+				
+				<TextView
+				    android:id="@+id/tv_current_temp"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:textColor="@color/black"
+				    android:text="@null"/>
+			</LinearLayout>
+			
+		    <LinearLayout
+			    android:id="@+id/ll_cur_mode"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+			
+				<TextView
+				    android:layout_width="100dp"
+				    android:layout_height="wrap_content"
+				    android:text="当前模式："
+				    android:textColor="@color/black"/>
+				
+				<TextView
+				    android:id="@+id/tv_current_mode"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:textColor="@color/black"
+				    android:text="@null"/>
+				
+			</LinearLayout>
+		</LinearLayout>    
+	    
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/ll_show_info"
+		    android:orientation="vertical" >
+		    
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="20dp"
+	            android:orientation="vertical" >
+
+	            <RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="20dp"
+		            android:orientation="horizontal" >
+
+					<Button
+					    android:id="@+id/btn_mode_shaoshui"
+					    android:layout_width="60dp"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentLeft="false"
+					    android:background="@drawable/btn_selector"
+					    android:text="烧水"
+					    android:textColor="@color/white"
+					    android:textSize="@dimen/text_size_larsamll" />
+					
+					<Button
+					    android:id="@+id/btn_mode_suannai"
+					    android:layout_width="60dp"
+					    android:layout_height="wrap_content"
+					    android:layout_centerHorizontal="true"
+					    android:background="@drawable/btn_selector"
+					    android:text="酸奶"
+					    android:textColor="@color/white"
+					    android:textSize="@dimen/text_size_larsamll" />
+					
+					<Button
+					    android:id="@+id/btn_mode_huacha"
+					    android:layout_width="60dp"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentRight="true"
+					    android:background="@drawable/btn_selector"
+					    android:text="花茶"
+					    android:textColor="@color/white"
+					    android:textSize="@dimen/text_size_larsamll" />
+
+				</RelativeLayout>
+
+	            <RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+		            android:orientation="horizontal" >
+					
+					<TextView
+					    android:id="@+id/tv_curtain_max_length"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:text="保温温度:"
+					    android:textColor="@color/black"
+					    android:textSize="@dimen/text_size_midsamll" />
+				
+				    <CheckBox 
+				        android:id="@+id/cb_cur_warm_temp"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content" 
+					    android:layout_centerVertical="true"
+					    android:layout_alignParentRight="true"
+					    android:text="启用保温"
+					    android:textColor="@color/black"
+					    android:textSize="@dimen/text_size_midsamll" />
+				</RelativeLayout>
+				
+				<RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+					android:layout_marginTop="0dp"
+		            android:orientation="horizontal" >
+
+					<TextView
+					    android:id="@+id/tv_cur_warm_temp"
+					    android:layout_width="80dp"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentEnd="true"
+					    android:layout_alignParentRight="true"
+					    android:layout_centerVertical="true"
+					    android:text="@null"
+					    android:textColor="@color/black"
+					    android:textSize="@dimen/text_size_midsamll" />
+					
+					<SeekBar
+					    android:id="@+id/sb_cur_warm_temp"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:layout_toLeftOf="@id/tv_cur_warm_temp"
+					    android:focusable="true"
+					    android:max="100"
+					    android:maxHeight="10dp"
+					    android:minHeight="10dp"
+					    android:paddingLeft="15dip"
+					    android:paddingRight="15dip"
+					    android:progress="0"
+					    android:progressDrawable="@drawable/po_seekbar_red"
+					    android:thumb="@drawable/seekbar_thumb" />
+					
+				</RelativeLayout>
+
+	            <RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+		            android:orientation="horizontal" >
+					
+					<TextView
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:text="剩余保温时间:"
+					    android:textColor="@color/black"
+					    android:textSize="@dimen/text_size_midsamll" />
+				
+					<TextView 
+				        android:id="@+id/tv_cur_left_time"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content" 
+					    android:layout_centerVertical="true"
+					    android:layout_alignParentRight="true"
+					    android:text="@null"
+					    android:textColor="@color/black"
+					    android:textSize="@dimen/text_size_midsamll" />
+				</RelativeLayout>
+				
+				<RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+					android:layout_marginTop="0dp"
+		            android:orientation="horizontal" >
+
+					<TextView
+					    android:id="@+id/tv_left_time"
+					    android:layout_width="80dp"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentEnd="true"
+					    android:layout_alignParentRight="true"
+					    android:layout_centerVertical="true"
+					    android:text="@null"
+					    android:textColor="@color/black"
+					    android:textSize="@dimen/text_size_midsamll" />
+					
+					<SeekBar
+					    android:id="@+id/sb_left_time"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:layout_toLeftOf="@id/tv_left_time"
+					    android:focusable="true"
+					    android:max="1440"
+					    android:maxHeight="10dp"
+					    android:minHeight="10dp"
+					    android:paddingLeft="15dip"
+					    android:paddingRight="15dip"
+					    android:progress="400"
+					    android:progressDrawable="@drawable/po_seekbar_red"
+					    android:thumb="@drawable/seekbar_thumb" />
+					
+				</RelativeLayout>
+				
+	            <RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+		            android:orientation="horizontal" >
+					
+					<TextView
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:text="使用功率:"
+					    android:textColor="@color/black"
+					    android:textSize="@dimen/text_size_midsamll" />
+				
+				</RelativeLayout>	
+					
+				<RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+					android:layout_marginTop="0dp"
+		            android:orientation="horizontal" >
+
+					<TextView
+					    android:id="@+id/tv_cur_power"
+					    android:layout_width="80dp"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentEnd="true"
+					    android:layout_alignParentRight="true"
+					    android:layout_centerVertical="true"
+					    android:text="@null"
+					    android:textColor="@color/black"
+					    android:textSize="@dimen/text_size_midsamll" />
+					
+					<SeekBar
+					    android:id="@+id/sb_cur_power"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:layout_toLeftOf="@id/tv_cur_power"
+					    android:focusable="true"
+					    android:max="800"
+					    android:maxHeight="10dp"
+					    android:minHeight="10dp"
+					    android:paddingLeft="15dip"
+					    android:paddingRight="15dip"
+					    android:progress="400"
+					    android:progressDrawable="@drawable/po_seekbar_red"
+					    android:thumb="@drawable/seekbar_thumb" />
+					
+				</RelativeLayout>
+			
+				
+	            <RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+		            android:orientation="horizontal" >
+					
+					<TextView
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:text="提醒温度:"
+					    android:textColor="@color/black"
+					    android:textSize="@dimen/text_size_midsamll" />
+				
+					<CheckBox 
+				        android:id="@+id/cb_notify_temperature"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content" 
+					    android:layout_centerVertical="true"
+					    android:layout_alignParentRight="true"
+					    android:text="启用提醒"
+					    android:textColor="@color/black"
+					    android:textSize="@dimen/text_size_midsamll" />
+				</RelativeLayout>	
+					
+				<RelativeLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+					android:layout_marginTop="0dp"
+		            android:orientation="horizontal" >
+
+					<TextView
+					    android:id="@+id/tv_notify_temperature"
+					    android:layout_width="80dp"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentEnd="true"
+					    android:layout_alignParentRight="true"
+					    android:layout_centerVertical="true"
+					    android:text="@null"
+					    android:textColor="@color/black"
+					    android:textSize="@dimen/text_size_midsamll" />
+					
+					<SeekBar
+					    android:id="@+id/sb_notify_temperature"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:layout_toLeftOf="@id/tv_notify_temperature"
+					    android:focusable="true"
+					    android:max="100"
+					    android:maxHeight="10dp"
+					    android:minHeight="10dp"
+					    android:paddingLeft="15dip"
+					    android:paddingRight="15dip"
+					    android:progress="40"
+					    android:progressDrawable="@drawable/po_seekbar_red"
+					    android:thumb="@drawable/seekbar_thumb" />
+					
+				</RelativeLayout>
+				
+				<RelativeLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="10dp"
+				    android:orientation="horizontal">
+
+					<Button
+					    android:id="@+id/btn_open"
+					    android:layout_width="90dp"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentLeft="true"
+					    android:background="@drawable/btn_selector"
+					    android:text="打开"
+					    android:textColor="@color/white"
+					    android:textSize="@dimen/text_size_larsamll" 
+					    android:visibility="gone" />
+					
+					<Button
+					    android:id="@+id/btn_close"
+					    android:layout_width="90dp"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentRight="true"
+					    android:background="@drawable/btn_selector"
+					    android:text="关闭"
+					    android:textColor="@color/white"
+					    android:textSize="@dimen/text_size_larsamll" />
+
+				</RelativeLayout>
+				
+				<RelativeLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="10dp"
+				    android:orientation="horizontal">
+
+					<Button
+					    android:id="@+id/btn_add_water"
+					    android:layout_width="90dp"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentLeft="true"
+					    android:background="@drawable/btn_selector"
+					    android:text="注水"
+					    android:textColor="@color/white"
+					    android:textSize="@dimen/text_size_larsamll" />
+					
+					<Button
+					    android:id="@+id/btn_close_water"
+					    android:layout_width="90dp"
+					    android:layout_height="wrap_content"
+					    android:layout_alignParentRight="true"
+					    android:background="@drawable/btn_selector"
+					    android:text="关闭注水"
+					    android:textColor="@color/white"
+					    android:textSize="@dimen/text_size_larsamll" />
+
+				</RelativeLayout>
+		    </LinearLayout>
+	    </LinearLayout>
+	    
+	</RelativeLayout>
+</RelativeLayout>

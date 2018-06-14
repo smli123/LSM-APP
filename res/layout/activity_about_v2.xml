@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/commom_bg_color">
+    
+    <include
+          android:id="@+id/commontitlebar"  
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          layout="@layout/view_common_titlebar"
+          android:layout_alignParentTop="true"/>        
+        
+    <RelativeLayout
+        android:id="@+id/layout_whole_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commontitlebar"
+        android:background="@color/commom_bg_color" >
+        
+	    <RelativeLayout
+		    android:id="@+id/layout_light_setting"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" 
+	        android:layout_marginTop="10dp"
+	        android:layout_marginLeft="0dp"
+	        android:layout_marginRight="0dp"	         
+	        android:background="@color/white"> 
+	                
+		    <RelativeLayout
+		        android:id="@+id/layout_light_header"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="5dp"
+		        android:layout_marginBottom="5dp"
+		        android:background="@color/white">
+
+		        <ImageView
+		            android:id="@+id/img_colorset"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="@dimen/margin_10dip"
+		            android:contentDescription="@null"
+		            android:scaleType="centerInside"
+		            android:src="@drawable/smp_icon" />
+
+		    </RelativeLayout> 
+			    
+		    <ImageView
+		        android:id="@+id/image_sep_1"
+		        android:layout_width="match_parent"
+		        android:layout_height="0.5dp"
+		        android:layout_marginLeft="@dimen/margin_10dip"
+		        android:layout_marginRight="@dimen/margin_10dip"
+		        android:layout_below="@+id/layout_light_header"
+		        android:background="@color/lightwhite"        
+		        android:contentDescription="@null" />
+			    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/image_sep_1"
+		        android:orientation="vertical" >	        
+
+			   	<RelativeLayout
+		        	android:id="@+id/rl_smartplug"
+			   	    android:layout_width="match_parent"
+			   	    android:layout_height="wrap_content" 
+			        android:layout_marginTop="5dp"
+			        android:layout_marginBottom="5dp">
+               
+				       	<TextView
+				       	    android:layout_width="wrap_content"
+				       	    android:layout_height="wrap_content"
+				       	    android:layout_alignParentLeft="true"
+		            		android:layout_marginLeft="@dimen/margin_10dip"
+				       	    android:text="@string/smartplug_logo"
+				       	    android:textColor="@color/black"
+				       	    android:textSize="@dimen/text_size_midsamll" />
+				         
+				       	<TextView
+				       	    android:id="@+id/tv_smartplug_version"
+				       	    android:layout_width="wrap_content"
+				       	    android:layout_height="wrap_content"
+				       	    android:layout_alignParentRight="true"
+		            		android:layout_marginRight="@dimen/margin_10dip"
+				       	    android:text="@null"
+				       	    android:textColor="@color/gray"
+				       	    android:textSize="@dimen/text_size_midsamll" />
+	
+				</RelativeLayout>
+				
+			    <ImageView
+			        android:id="@+id/image_sep_2"
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:layout_below="@+id/layout_light_header"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+			    
+			   	<RelativeLayout
+		        	android:id="@+id/rl_company_web"
+			   	    android:layout_width="match_parent"
+			   	    android:layout_height="wrap_content"
+			        android:layout_marginTop="5dp"
+			        android:layout_marginBottom="5dp" >
+               
+				       	<TextView
+				       	    android:layout_width="wrap_content"
+				       	    android:layout_height="wrap_content"
+				       	    android:layout_alignParentLeft="true"
+		            		android:layout_marginLeft="@dimen/margin_10dip"
+				       	    android:text="@string/smartplug_company_web"
+				       	    android:textColor="@color/black"
+				       	    android:textSize="@dimen/text_size_midsamll" />
+				         
+				       	<TextView
+				       	    android:id="@+id/tv_company_web_address"
+				       	    android:layout_width="wrap_content"
+				       	    android:layout_height="wrap_content"
+				       	    android:layout_alignParentRight="true"
+		            		android:layout_marginRight="@dimen/margin_10dip"
+				       	    android:text="@string/smartplug_company_web_address"
+				       	    android:textColor="@color/gray"
+				       	    android:textSize="@dimen/text_size_midsamll" />
+	
+				   </RelativeLayout>
+			   	
+			    <ImageView
+			        android:id="@+id/image_sep_3"
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:layout_below="@+id/layout_light_header"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+			    
+			   	<RelativeLayout
+		        	android:id="@+id/rl_service_phone"
+			   	    android:layout_width="match_parent"
+			   	    android:layout_height="wrap_content"
+			        android:layout_marginTop="5dp"
+			        android:layout_marginBottom="5dp" >
+               
+				       	<TextView
+				       	    android:layout_width="wrap_content"
+				       	    android:layout_height="wrap_content"
+				       	    android:layout_alignParentLeft="true"
+		            		android:layout_marginLeft="@dimen/margin_10dip"
+				       	    android:text="@string/smartplug_service_phone"
+				       	    android:textColor="@color/black"
+				       	    android:textSize="@dimen/text_size_midsamll" />
+				         
+				       	<TextView
+				       	    android:id="@+id/tv_service_phone_number"
+				       	    android:layout_width="wrap_content"
+				       	    android:layout_height="wrap_content"
+				       	    android:layout_alignParentRight="true"
+		            		android:layout_marginRight="@dimen/margin_10dip"
+				       	    android:text="@string/smartplug_service_phone_number"
+				       	    android:textColor="@color/gray"
+				       	    android:textSize="@dimen/text_size_midsamll" />
+	
+				   </RelativeLayout>
+		    </LinearLayout>
+		    
+		    
+		    
+		</RelativeLayout>	    
+	</RelativeLayout>    
+</RelativeLayout>    

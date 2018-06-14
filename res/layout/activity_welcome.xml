@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_xllarge"
+        android:text="@string/app_name" />
+
+    <ImageView
+        android:id="@+id/img_main"
+        android:layout_width="match_parent"
+       	android:layout_height="0dp"
+    	android:layout_weight="3"
+        android:src="@drawable/smp_wizard_icon"
+        android:contentDescription="@null"
+        />
+
+    <RelativeLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="0dp"
+    	android:layout_weight="1"
+    	android:background="@drawable/smp_wizard_bottom">
+<!-- 	   	<ImageView
+	   	    android:id="@+id/img_foot"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:background="@drawable/smp_wizard_bottom"
+	        android:contentDescription="@null"/> -->
+	
+	   	<TextView
+	   	    android:id="@+id/btn_welcome"
+	   	    android:layout_width="wrap_content"
+	   	    android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:gravity="center"
+	   	    android:background="@drawable/smp_welcome_enter"
+	   	    android:text="@string/smartplug_start_now"
+	   	    android:textColor="@color/blue" 
+	   	    android:visibility="gone"/>
+   	</RelativeLayout>
+   	
+</LinearLayout>

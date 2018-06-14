@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">智慧家居</string>
+    <string name="corp_name">鑫思度科技</string>
+    <string name="version_notify">版权所有</string>
+    <string name="version_right">Copyright © 2015 Thingzdo Corp. All Rights Reserved</string>
+    <string name="action_settings">设置</string>
+    <string name="smartplug_logo">智慧家居</string>
+    <string name="smartplug_city">所在城市</string>
+    <string name="smartplug_company_web">公司网址</string>
+    <string name="smartplug_speek_time">定时时间</string>
+    <string name="smartplug_company_web_address">http://www.thingzdo.com</string>
+    <string name="smartplug_service_phone">客服电话</string>
+    <string name="smartplug_service_phone_number">400-123-456</string>
+    <string name="smartplug_warning">告警</string>
+    <string name="smartplug_ok">确定</string>
+    <string name="smartplug_refresh">刷新</string>
+    <string name="smartplug_cancel">取消</string>
+    <string name="smartplug_esc">退出</string>
+    <string name="smartplug_yes">是</string>
+    <string name="smartplug_no">否</string>  
+    <string name="week">周</string>  
+    <string name="Sunday">日</string>
+    <string name="Monday">一</string>
+    <string name="Tuesday">二</string>
+    <string name="Wednesday">三</string>
+    <string name="Thursday">四</string>
+    <string name="Friday">五</string>
+    <string name="Saturday">六</string>
+    <string name="DateTimeFormat">M月d日</string>
+    <string name="Datetime_Short">M-d HH:mm:ss</string>
+    <string name="DateTime_show_format">yyyy-M-d HH:mm:ss</string> 
+    <string name="DateTime_db_format">yyyy-MM-dd HH:mm:ss</string>
+    <string name="smartplug_about">关于</string> 
+    <string name="phone_number_error">电话号码输入错误</string>
+    <string name="smartplug_goback">返回</string>  
+    <string name="smartplug_exit">确定退出应用？</string>
+    <string name="smartplug_logout">注销</string>
+    <string name="smartplug_reset">重置</string>
+    <string name="smartplug_confirm">确定</string>
+    <string name="smartplug_commit">提交</string>
+    <string name="smartplug_start_now">立即体验</string>
+    <string name="smartplug_shake_shake">摇一摇</string>
+    <string name="smartplug_wifi_login">WiFi直连</string>
+    <string name="smartplug_wifi_notopen">请先打开WiFi连接</string>
+    <string name="smartplug_serverip_hangzhou">杭州服务器</string>
+    <string name="smartplug_serverip_shenzhen">深圳服务器</string>
+    <string name="smartplug_serverip_debug">调试服务器</string>
+    
+    <string name="tabhost_favorite">常用</string>
+    <string name="tabhost_control">插座</string>
+    <string name="tabhost_query">查询</string>
+    <string name="tabhost_manage">管理</string>
+    <string name="tabhost_settings">设置</string>
+ 
+    <string name="login_register">注册</string>
+    <string name="login_login">登录</string> 
+    <string name="login_logining">正在登录...</string>
+    <string name="login_wellcome">欢迎%s, </string> 
+    <string name="login_inputuser">请填写用户名</string>
+    <string name="login_inputpwd">请填写密码</string>
+    <string name="login_savepwd">记住密码</string>
+    <string name="login_pwd_error">密码错误</string>  
+    <string name="login_pwd_findback">忘记密码?</string> 
+    <string name="login_pwd_sent">密码已发送到 </string>
+    <string name="login_pwd_findconfirm_sms">确定发送密码短信？</string> 
+    <string name="login_pwd_findconfirm_email">确定发送密码邮件？</string>
+    <string name="login_pwd_network_invalid">请打开WiFi或数据连接</string>
+    <string name="login_pwd_wifi_notopen">请打开WiFi连接</string>
+    <string name="login_pwd_network_connect">打开WiFi或数据连接</string>
+    <string name="login_pwd_sendemail">邮件</string>
+    <string name="login_pwd_sendsms">短信</string>
+    <string name="login_info_no_internet">没有数据网络</string>
+    <string name="login_info_no_email">没有邮件地址</string>    
+    <string name="login_info_no_phone">没有电话号码</string>
+    <string name="login_timeout">连接智慧家居中心超时，请确认已经连接上互联网</string>
+    <string name="login_timeout_devices">连接智能插座超时</string>
+    <string name="login_cmd_socket_timeout">连接智慧家居中心失败，请确认已经连接上互联网</string>
+    <string name="login_cmd_socket_timeout_devices">连接智能插座超时</string>
+    <string name="login_input_email">请填写您注册时使用的邮箱</string>
+    <string name="login_pwd_send_email_ok">密码已发送到邮件</string>
+    <string name="login_logout">退出登录</string>
+    <string name="login_shake_addplug">"增加插座"</string>
+    <string name="login_shake_enter">"进入摇一摇"</string>
+    <string name="login_shake_scaning">"正在扫描..."</string>
+    
+    <string name="register_title_register">注册</string>
+    <string name="register_title_modify">编辑注册信息</string>
+    <string name="register_username">用 户 名</string>
+    <string name="register_appphonenumber">手机号码</string>
+    <string name="register_pwd">密 码</string>
+    <string name="register_confirmpwd">密码确认</string>
+    <string name="register_email">电子邮箱</string>
+    <string name="register_pwdfindSIM">密保号码</string>
+    <string name="register_carSIM">电话卡号</string>
+    <string name="register_carnumber">车牌号</string>
+    <string name="register_carmoduleid">模块ID</string>
+    <string name="register_carserialno">模块序列号</string>
+    <string name="register_info_nousername">用户名不能为空</string>
+    <string name="register_info_noappphone">手机号码不能为空</string>
+    <string name="register_info_nopwd">密码不能为空</string>
+    <string name="register_info_noconfirmpwd">请输入确认密码</string>
+    <string name="register_info_noemail">电子邮箱不能为空</string>
+    <string name="register_info_invalidemail">非有效的电子邮箱</string>
+    <string name="register_info_pwdconfirmerror">两次密码不一致，请重新输入</string>
+    <string name="register_info_nomodulephone">请输入模块的电话号码</string>
+    <string name="register_info_nofindpwdandemail">没有找到密码和Email</string>
+    <string name="register_info_nofindpwdphoneandemail">请输入找回密码Email</string>
+    <string name="register_info_nocarnumber">请输入车牌号</string>
+    <string name="register_info_lessthansixchar">密码长度不能小于6个字符</string>
+    <string name="register_info_morethantwentychar">密码长度不能大于20个字符</string>
+    <string name="register_info_pwdinvalid">密码只能是数字或英文字母</string>
+    <string name="register_info_selectoption">请选择</string>
+    <string name="register_info_modify">编辑</string>
+    <string name="register_info_delete">删除</string>
+    <string name="register_photo_by_camera">拍照</string>
+    <string name="register_photo_by_gallery">选择图片</string> 
+    <string name="register_photo_del">删除</string>   
+    <string name="register_network_vaild">请先打开WiFi或数据连接</string>
+    <string name="register_no_moduleid">模块ID为空</string>
+    <string name="register_no_right">无权限操作</string>
+    <string name="register_register_now">正在注册...</string>
+    
+
+    <string name="smartplug_title_control">插座</string>
+    <string name="smartplug_title_query">查询</string>
+    <string name="smartplug_title_manage">管理</string>
+    <string name="smartplug_title_settings">设置</string>
+    <string name="smartplug_title_plug_detail">详情</string>
+    <string name="smartplug_title_log">操作记录</string>
+        
+    <string name="sendcmd_command_sending">指令发送中...</string>
+    <string name="sendcmd_command_sent">相同的指令已经发送</string>
+    <string name="sendcmd_command_invalid">无效指令</string>
+    
+    <string name="protocol_config">通信协议</string>
+    <string name="protocol_tcp">TCP</string>
+    <string name="protocol_udp">UDP</string>
+
+	<!-- 错误码 -->
+	<string name="app_response_not_register">用户尚未注册</string>
+	<string name="app_response_password_error">登录密码错误</string>
+	<string name="app_response_plug_noresponse">插座未响应命令</string>
+	<string name="app_response_user_exist">用户已注册过</string>
+	<string name="app_response_invalid_string">发送给智慧家居中心的操作无效</string>
+	<string name="app_response_user_logined">用户已登录</string>
+	<string name="app_response_plug_not_exist">插座不存在</string>
+	<string name="app_response_plug_been_assigned">插座已经配置给其他用户</string>
+	<string name="app_response_user_no_plug">您名下无此插座</string>
+	<string name="app_response_plug_name_exist">您名下已有同名插座</string>
+	<string name="app_response_plug_add_timer_fail">增加插座定时任务失败</string>
+	<string name="app_response_plug_mod_timer_fail">修改插座定时任务失败</string>
+	<string name="app_response_plug_del_timer_fail">删除插座定时任务失败</string>
+	<string name="app_response_plug_offline">插座不在线</string>
+	<string name="app_response_pwd_email_error">密码邮箱错误</string>
+	<string name="app_response_email_registered">邮箱已注册过</string>
+	<string name="app_response_unknown_error">未知错误</string>
+	<string name="app_response_login_fail">"登录智慧家居中心失败了"</string>
+	<string name="app_response_login_fail_devices">"登录智能插座失败了"</string>
+	<string name="app_response_device_online">"插座上线"</string>
+	<string name="app_response_device_offline">"插座离线"</string>
+	
+	<string name="server_response_fail_to_insert_db">服务器写数据库失败</string>	
+	<string name="server_response_fail_to_update_db">服务器更新数据库失败</string>		
+	<string name="server_response_fail_to_send_pwd_email">服务器重置邮件发送失败</string>
+    
+    <string name="txt_plug_poweroff">插座断电</string>
+    <string name="txt_plug_poweron">插座 通电</string>
+    <string name="txt_plug_poweron_attime">定时通电</string>
+    <string name="txt_plug_poweroff_attime">定时断电</string>
+    
+    <string name="str_del_one_socket">刪除插座</string>
+    <string name="str_add_one_socket">增加插座</string>
+    
+    <string name="str_query_electricity">用电统计</string>
+    <string name="str_query_fee">电费计算</string>
+    
+    <string name="str_connect_socket_wifi">第一步：连接插座</string>
+    <string name="str_init_socket">第二步：启用插座</string> 
+    
+    <string name="add_plug_name">插座名称</string>
+    <string name="add_plug_mac">插座MAC</string>
+    <string name="add_plug_mac_address">MAC地址</string>
+    <string name="add_plug_immediate_power">即时功率</string>
+    <string name="add_plug_one_hour">前一小时电量</string>
+    <string name="add_plug_one_day">前一天电量</string>
+    <string name="add_plug_one_week">前一周电量</string>
+    <string name="add_plug_one_month">前一月电量</string>
+    
+    <string name="add_plug_ip_address">IP地址</string>
+    <string name="add_plug_module_version">设备版本</string>
+    <string name="add_plug_module_type">设备类型</string>
+    <string name="str_reset_module">复位设备</string>
+    <string name="str_upgrade_module">升级设备</string>
+    <string name="str_update">更新</string>
+    <string name="str_next_step">下一步</string> 
+    
+    <string name="str_oper_shakeshake_tip">提示：点击刷新按钮可以重新搜索同一个局域网内的智能插座</string>
+    <string name="str_wifi">无线路由器</string>
+    <string name="str_wifi_mode">加密类型</string>
+    <string name="str_selectall">全选</string>
+    <string name="str_wifi_pwd">路由器密码</string>
+    <string name="str_wifi_ssid">SSID</string>
+    <string name="str_passwd_visible">显示密码</string>
+    <string name="str_info_plugname_empty_error">请给插座命名</string>
+    <string name="str_info_pwd_empty_error">请输入密码</string>
+    <string name="str_aboutus">关于我们</string>
+    <string name="str_cleartimer">清除定时任务</string>
+    
+    
+    <string name="str_modify_pwd">修改密码</string>
+    <string name="str_modify_email">修改邮箱</string>  
+    <string name="str_old_pwd">原密码</string>
+    <string name="str_new_pwd1">新密码</string>
+    <string name="str_new_pwd2">确定新密码</string>
+    <string name="str_plug_task">定时任务</string>
+    <string name="str_old_email">原邮箱</string>
+    <string name="str_new_email">新邮箱</string>
+    <string name="plug_modify_name">改名称</string>
+    
+    <!-- 定时任务  -->
+    <string name="timer_task_title">"定时任务"</string>
+    <string name="timer_task_poweron">"定时通电"</string>
+    <string name="timer_task_poweroff">"定时断电"</string>
+    <string name="timer_task_openpc">"定时开机"</string>
+    <string name="timer_task_closepc">"定时关机"</string>
+    <string name="timer_task_lighton">"定时开灯"</string>
+    <string name="timer_task_lightoff">"定时关灯"</string> 
+    <string name="timer_task_usbon">"定时开USB"</string>
+    <string name="timer_task_usboff">"定时关USB"</string>       
+    <string name="timer_task_bell">"定时闹钟"</string>
+    <string name="timer_task_openpc_time">"开机时间"</string>
+    <string name="timer_task_sametime">"时间不能相同"</string>
+    <string name="timer_task_mac_fail">"Mac地址格式输入错误"</string>
+    <string name="timer_task_peroid">"重复"</string>
+    <string name="timer_task_peroid_minute">"周期间隔"</string>
+    <string name="timer_task_inittime">"00:00"</string>
+    <string name="timer_task_inittime_addone">"00:01"</string>
+    <string name="timer_task_hour">"时"</string>
+    <string name="timer_task_minute">"分"</string>
+    <string name="timer_task_second">"秒"</string>
+    <string name="timer_task_selecttime">"选择时间"</string>
+    <string name="timer_task_timeset_err">"请选择时间或周期"</string>
+    <string name="timer_task_timer_start">"开"</string>
+    <string name="timer_task_timer_stop">"关"</string>
+    <string name="timer_task_timer_mac">"Mac"</string>
+    
+    <string name="smartplug_login_findpwd">"找回密码..."</string>
+    <string name="smartplug_login_getpwd">"请到邮箱查看密码"</string>
+    
+    <string name="smartplug_ctrl_sync">"正在同步..."</string>
+    <string name="smartplug_ctrl_sync_fail">"同步插座失败"</string>
+    <string name="smartplug_ctrl_poweron">"通电..."</string>
+	<string name="smartplug_ctrl_config_protocol">"配置协议..."</string>
+    <string name="smartplug_ctrl_poweron_fail">"通电失败"</string>
+	<string name="smartplug_ctrl_protocol_fail">"配置通信协议失败"</string>
+    <string name="smartplug_ctrl_poweroff">"断电..."</string>
+    <string name="smartplug_ctrl_poweroff_fail">"断电失败"</string>
+    <string name="smartplug_ctrl_delete">"删除插座..."</string>
+    <string name="smartplug_ctrl_delete_fail">"删除插座失败"</string>
+    <string name="smartplug_ctrl_moding_name">"修改插座名称..."</string>
+    <string name="smartplug_ctrl_mod_name">"修改插座名称"</string>
+    <string name="smartplug_ctrl_lighton">"开夜灯..."</string>
+    <string name="smartplug_ctrl_lighton_fail">"开夜灯失败"</string>
+    <string name="smartplug_ctrl_lightoff">"关夜灯..."</string>
+    <string name="smartplug_ctrl_lightoff_fail">"关夜灯失败"</string>  
+    <string name="smartplug_ctrl_usbon">"开USB..."</string>
+    <string name="smartplug_ctrl_usbon_fail">"开USB失败"</string>
+    <string name="smartplug_ctrl_usboff">"关USB..."</string>
+    <string name="smartplug_ctrl_usboff_fail">"关USB失败"</string>      
+    <string name="smartplug_ctrl_pcon">"开电脑..."</string>
+    <string name="smartplug_ctrl_pcoff">"关电脑..."</string>
+    <string name="smartplug_ctrl_pcon_fail">"开电脑失败"</string>
+    <string name="smartplug_ctrl_pcoff_fail">"开电脑失败"</string>
+    <string name="smartplug_ctrl_bell">"响铃"</string>
+    <string name="smartplug_ctrl_lock">"家长锁"</string>
+    <string name="smartplug_ctrl_openpc_cmd">"开机棒"</string>
+    <string name="smartplug_ctrl_closepc_cmd">"关机"</string>
+    <string name="smartplug_ctrl_openpc">"开机棒"</string>
+    <string name="smartplug_ctrl_closepc">"关机棒"</string>
+    <string name="smartplug_ctrl_lock_on">"打开家长锁"</string>      
+    <string name="smartplug_ctrl_lock_off">"关闭家长锁"</string>
+    <string name="smartplug_ctrl_openpc_on">"打开电脑"</string>      
+    <string name="smartplug_ctrl_openpc_off">"关闭电脑"</string>
+    <string name="smartplug_notify_online">"在线"</string>
+    <string name="smartplug_notify_offline">"离线"</string>
+    <string name="smartplug_add_success">"增加插座成功"</string>
+    <string name="smartplug_add_fail">"增加插座失败"</string>
+    <string name="smartplug_ap2station_fail">"切换AP失败，请手工切换WIFI"</string>
+    <string name="smartplug_oper_power_fail">"操作电源失败"</string>
+    <string name="smartplug_oper_back2ap_fail">"复位设备失败"</string>
+	<string name="smartplug_oper_curtain_fail">"操作窗帘失败"</string>
+	<string name="smartplug_enable_charge_fail">"使能电量统计功能失败"</string>
+	<string name="smartplug_query_energe_fail">"查询即时功率失败"</string>
+	<string name="smartplug_query_charge_fail">"查询电量失败"</string>   	
+	<string name="smartplug_oper_window_fail">"操作窗户失败"</string>
+	<string name="smartplug_oper_aled_fail">"操作智能灯失败"</string>
+	<string name="smartplug_oper_aircon_server_fail">"获取服务器红外数据失败"</string>
+	<string name="smartplug_oper_aircon_fail">"操作红外遥控器失败"</string>
+	<string name="smartplug_oper_battery_query_trail_fail">"服务器获取位置信息失败"</string>
+    <string name="smartplug_oper_protocol_fail">"设置插座通信协议失败"</string>
+    <string name="smartplug_oper_light_fail">"操作夜灯失败"</string>
+    <string name="smartplug_oper_usb_fail">"操作USB失败"</string>
+    <string name="smartplug_oper_parentctrl_fail">"设置家长控制失败"</string>
+    <string name="smartplug_ctrl_addtimer_fail">"增加定时任务失败"</string>
+    <string name="smartplug_ctrl_deletetimer_fail">"删除定时任务失败"</string>
+    <string name="smartplug_ctrl_modifyplugname_fail">"修改插座名称失败"</string>
+    <string name="smartplug_ctrl_modifypwd_fail">"修改密码失败"</string>
+    <string name="smartplug_ctrl_modifytimer_fail">"修改定时任务失败"</string>
+    <string name="smartplug_ctrl_userregister_fail">"用户注册失败"</string>
+    <string name="smartplug_ctrl_resetpwd_fail">"重置密码失败"</string>
+    <string name="smartplug_ctrl_settimer_fail">"设置定时任务失败"</string>
+    <string name="smartplug_ctrl_modifying">"修改..."</string>
+    <string name="smartplug_ctrl_adding">"增加..."</string>
+    <string name="smartplug_ctrl_adjustcolor">"调色..."</string>
+    <string name="smartplug_ctrl_samename_exist">"同名插座已经存在"</string>
+    <string name="smartplug_ctrl_mod_plugname_length_too_long">"插座名字长度超过20，请减少名字长度。1个汉字会占用多个字节"</string>
+    
+    <string name="pull_to_refresh">下拉可以刷新</string>  
+    <string name="release_to_refresh">释放立即刷新</string>  
+    <string name="refreshing">正在刷新…</string>  
+    <string name="not_updated_yet">暂未更新过</string>  
+    <string name="updated_at">上次更新于 %s 前</string>  
+    <string name="updated_just_now">刚刚更新</string>  
+    <string name="time_error">时间有问题</string> 
+    
+    <string name="add">增加</string>
+    <string name="timer">定时任务</string>
+    <string name="power">电源</string>
+    <string name="shutdownpc">关机</string>
+    <string name="nightlight">夜灯</string>
+    <string name="lightcolor">夜灯配色</string>
+    <string name="bell">闹钟</string>
+    <string name="usb">USB</string>
+    <string name="openpc">开机棒</string>
+    <string name="closepc">关机棒</string>
+    <string name="user_force_logout">"用户同时在其它APP上登录，强制退出"</string>
+    <string name="app_disconnect_with_server">"程序与服务器已经断开连接，请重新登录"</string>
+
+    <string name="deleting">"正在删除..."</string>
+    <string name="active">"打开..."</string>
+    <string name="deactive">"关闭..."</string>
+    <string name="connect">等待上线...</string>
+    
+    <string name="app_update">检查更新</string>
+    <string name="app_modify_pwd">修改密码</string>
+    <string name="app_modify_email">修改邮箱</string>
+    <string name="app_modify_serverip">修改服务器</string>
+    <string name="app_help">帮助中心</string>
+    <string name="app_iat">语音控制</string>
+    <string name="app_config">参数配置</string>
+    <string name="app_dueros">智能音响</string>
+    <string name="app_feedback">意见反馈</string>
+    <string name="app_share">分享</string>
+    <string name="app_account_security">账号与安全</string>
+    <string name="app_mod_email_ok">修改邮箱成功</string>
+    <string name="app_mod_email_fail">修改邮箱失败</string>
+    <string name="app_mod_pwd_ok">密码修改成功</string>
+    <string name="app_mod_pwd_fail">密码修改失败</string>  
+    <string name="app_mod_email_nonewemail">"请输入新邮箱"</string>  
+    <string name="app_mod_email_samemail">"邮箱相同，不需要修改"</string>
+    <string name="app_mod_pwd_nonewpwd">"请输入新密码"</string> 
+    <string name="app_mod_pwd_noconfirmpwd">"请确认新密码"</string>
+    <string name="app_mod_pwd_differentpwd">"两次输入的密码不一致"</string>
+    <string name="revcmd_title">收到模块消息</string>
+    <string name="app_feedback_contactmode">"电话/邮箱"</string>
+    <string name="app_feedback_phone">请输入联系方式</string>
+    <string name="app_feedback_content">请填写您的宝贵意见</string>
+    <string name="app_feedback_not_found_email">您的个人信息中未登记Email账号，请完善个人资料</string>  
+    <string name="app_feedback_commit">您的意见已经提交,谢谢！</string>
+    <string name="app_input_information">请输入信息</string>
+    
+    <!-- 插座操作 -->
+    <string name="smartplug_oper_noscanplug">未扫描到插座</string>
+    <string name="smartplug_oper_openwifi">"正在打开WiFi，请稍等..."</string>
+    <string name="smartplug_oper_devices">"待配置插座"</string>
+    <string name="smartplug_oper_scan_devices">"搜索到的插座"</string>
+    <string name="smartplug_oper_scanning">"扫描插座"</string>
+    <string name="smartplug_oper_scan">"扫描"</string>
+    <string name="smartplug_oper_noscanrouter">"未扫描到本地无线路由器"</string>
+    <string name="smartplug_oper_getplugfail">"获得插座信息失败"</string>
+    <string name="smartplug_oper_connectrouterfail">"插座连接无线路由器失败"</string>
+    <string name="smartplug_oper_nowifi">"未检测到WiFi连接，增加插座失败"</string>
+    <string name="smartplug_oper_socketexception">"网络连接异常，增加插座失败"</string>
+    <string name="smartplug_oper_getpluginfofail">"获得插座信息失败，请重启插座再添加"</string>
+    <string name="smartplug_oper_connectseverfail">"插座连接服务器失败，请复位插座后再添加"</string>
+    <string name="smartplug_oper_initplug">"获取插座信息"</string>
+    <string name="smartplug_oper_selectrouter">"选择本地路由器:"</string>
+    <string name="smartplug_oper_execconfig">"增加插座"</string>
+    <string name="smartplug_oper_selectrouter_title">"请选择无线路由器"</string>
+    <string name="smartplug_oper_selecttemperature_title">"请选择温度"</string>
+    <string name="smartplug_oper_selectmac_title">"请选择Mac地址"</string>
+    <string name="smartplug_oper_selectmodule_title">"请选择模块"</string>
+    <string name="smartplug_oper_selectcity_title">"请选择城市"</string>
+    <string name="smartplug_oper_routermode_title">"路由器加密方式"</string>
+    <string name="smartplug_oper_connect_plug">"连接插座..."</string>
+    <string name="smartplug_oper_connect_fail">"连接插座失败"</string>
+    <string name="smartplug_oper_timer_full">"插座定时器已达到上限(10个)"</string>
+    <string name="smartplug_oper_router_not_support_chinese">"智能插座不支持路由器名字中含有中文、特殊英文字符，请修改路由器SSID或更换新的路由器"</string>
+    
+    
+    <!-- 管理 -->
+    <string name="smartplug_mgr_newver">"已是最新版本"</string>
+    <string name="smartplug_mgr_nowifi">"没有WiFi连接， 只在WiFi下更新"</string>
+    <string name="smartplug_mgr_updatetimeout">"检查更新超时"</string>
+    <string name="smartplug_nosharp_email">邮箱中不能包含#符号</string>
+    <string name="smartplug_nosharp_username">用户名中不能包含#符号</string>
+    <string name="smartplug_nosharp_pwd">密码中不能包含#符号</string>
+    <string name="smartplug_mgr_reselect">重选</string>
+    <string name="smartplug_mgr_logout">增加新插座时将暂时退出登录</string>
+    <string name="smartplug_mgr_entershake">"增加插座成功，是否进入摇一摇控制？"</string>
+    <string name="smartplug_mgr_notscanplug">"未扫描到插座，是否进入摇一摇控制？"</string>
+    <string name="smartplug_mgr_addshake">继续增加</string>
+    
+    <string name="update_minute">分钟</string>
+    <string name="update_hour">小时</string>
+    <string name="update_day">天</string>
+    <string name="update_month">月</string>
+    <string name="update_year">年</string>
+    
+    <string name="oper_error">操作失败，请重试</string>
+    <string name="oper_success">操作成功</string>
+    <string name="oper_tcpsocket_is_null">"TCP连接为空，请重新连接设备"</string>
+    <string name="oper_tcpsocket_invalid">"TCP连接已失效，请重新连接设备"</string>
+
+    <!-- 智能窗帘 -->
+    <string name="str_title_curtain_name">智能窗帘控制器</string>
+    <string name="str_btn_curtainopen">打开窗帘</string>
+    <string name="str_btn_curtainclose">关闭窗帘</string>
+    <string name="str_btn_curtainpause">停止</string>
+    <string name="str_btn_curtaininit">初始化窗帘</string>
+    <string name="str_introduct_curtain_max_length">窗帘打开的位置(%)</string>
+    <string name="str_introduct_curtain_init">首次使用或者手工移动位置后，需初始化窗帘</string>
+    
+    <!-- 红外插件-->
+    <string name="str_btn_aircon_select">空调类型</string>
+    <string name="str_btn_aircon_controller">遥控器</string>
+    <string name="str_introduct_aircon_switch">开关控制</string>
+    <string name="str_introduct_aircon_temperature">温度(℃)</string>
+    <string name="str_btn_aircon_open">打开</string>
+    <string name="str_btn_aircon_close">关闭</string>
+    <string name="str_btn_aircon_temperature_descrease">减少</string>
+    <string name="str_btn_aircon_temperature_increase">增加</string>
+    <string name="str_btn_aircon_temperature_descrease_simple">"一"</string>
+    <string name="str_btn_aircon_temperature_increase_simple">"十"</string>
+    <string name="str_btn_aircon_running_mode">运转模式</string>
+    <string name="str_btn_aircon_mode_auto">自动</string>
+    <string name="str_btn_aircon_mode_cool">冷气</string>
+    <string name="str_btn_aircon_mode_wet">除湿</string>
+    <string name="str_btn_aircon_mode_wind">送风</string>
+    <string name="str_btn_aircon_mode_warm">暖气</string>
+    <string name="str_btn_aircon_scene_name">定时任务</string>
+    <string name="str_btn_aircon_scene_1h">一小时后</string>
+    <string name="str_btn_aircon_scene_2h">二小时后</string>
+    <string name="str_btn_aircon_scene_3h">三小时后</string>
+    <string name="str_btn_aircon_scene_4h">四小时后</string>
+    <string name="str_btn_aircon_scene_5h">五小时后</string>
+    <string name="str_btn_aircon_scene_6h">六小时后</string>
+    <string name="str_btn_aircon_scene_7h">七小时后</string>
+    <string name="str_btn_aircon_scene_8h">八小时后</string>
+    <string name="str_btn_aircon_scene_9h">九小时后</string>
+    <string name="str_btn_aircon_scene_10h">十小时后</string>
+    
+    <!-- 智能灯光 -->
+    <string name="str_wireless_controller">无线控制器: </string>
+    <string name="str_btn_all_poweron">全部打开</string>
+    <string name="str_btn_all_poweroff">全部关闭</string>
+    <string name="str_btn_adjust_cool">色调变冷</string>
+    <string name="str_btn_adjust_warm">色调变暖</string>
+    <string name="str_btn_light_bright">灯光变亮</string>
+    <string name="str_btn_light_dark">灯光变暗</string>
+    <string name="str_btn_group_1">一组</string>
+    <string name="str_btn_group_2">二组</string>
+    <string name="str_btn_group_3">三组</string>
+    <string name="str_btn_group_4">四组</string>
+    <string name="str_btn_group_poweron">打开</string>
+    <string name="str_btn_group_poweroff">关闭</string>
+
+    <!-- 智能电池 -->
+    <string name="str_battery_charge">"剩余电量: "</string>
+    <string name="str_battery_sendcommand">发送命令</string>
+    
+    <!-- 请替换成在语音云官网申请的appid  56f1451a   5851112c  592796f9  59ed419a 5a1cd0bd-->
+    <string name="app_id">5a1cd0bd</string>
+    <string name="example_explain">本示例为讯飞语音Android平台开发者提供语音听写，语音识别（包括命令词和语法文件识别）和语音合成等代码样例，旨在让用户能够依据该示例快速开发出基于语音接口的应用程序。</string>
+    <string name="text_tts_source">科大讯飞作为中国最大的智能语音技术提供商，在智能语音技术领域有着长期的研究积累，并在中文语音合成、语音识别、口语评测等多项技术上拥有国际领先的成果。科大讯飞是我国唯一以语音技术为产业化方向的“国家863计划成果产业化基地”&#8230;</string>
+    <string name="text_tts_source_en">iFLYTEK is a national key software enterprise dedicated to the research of intelligent speech and language technologies, development of software and chip products, provision of speech information services, and integration of E-government systems. The intelligent speech technology of iFLYTEK, the core technology of the company, represents the top level in the world.</string>
+    <string name="text_isr_abnf_hint">\t上传内容为：\n\t#ABNF 1.0 gb2312;\n\tlanguage zh-CN;\n\tmode voice;\n\troot $main;\n\t$main = $place1 到$place2 ;\n\t$place1 = 北京 | 武汉 | 南京 | 天津 | 东京 | 打开 | 关闭;\n\t$place2 = 上海 | 合肥 | 灯光 | 电源 | USB;</string>
+    <string name="text_understand_hint">\t您可以说：\n\t今天的天气怎么样?\n\t北京到上海的火车?\n\t有什么好吃的?\n\t上海外滩有哪些酒店?\n\n\t更多语义请登录：\n\thttp://osp.voicecloud.cn/ \n\t配置您的专属语义吧!</string>
+    <!-- 听写 -->
+    <string name="text_begin">请开始说话&#8230;</string>
+    <string name="text_upload_contacts">上传联系人</string>
+    <string name="text_upload_userwords">上传用户词表</string>
+    <string name="text_upload_success">上传成功</string>
+    <string name="text_userword_empty">词表下载失败或内容为空</string>
+    <string name="text_download_success">下载成功</string>
+    <string name="pref_key_iat_show">iat_show</string>
+    <string name="pref_title_iat_show">显示听写界面</string>
+    <!-- 合成 -->
+    <string-array name="voicer_cloud_entries">
+        <item>小燕</item>
+        <item>小宇</item>
+        <item>凯瑟琳</item>
+        <item>亨利</item>
+        <item>玛丽</item>
+        <item>小研</item>
+        <item>小琪</item>
+        <item>小峰</item>
+        <item>小梅</item>
+        <item>小莉</item>
+        <item>小蓉</item>
+        <item>小芸</item>
+        <item>小坤</item>
+        <item>小强 </item>
+        <item>小莹</item>
+        <item>小新</item>
+        <item>楠楠</item>
+        <item>老孙</item>
+    </string-array>
+    <string-array name="voicer_cloud_values">
+        <item>xiaoyan</item>
+        <item>xiaoyu</item>
+        <item>catherine</item>
+        <item>henry</item>
+        <item>vimary</item>
+        <item>vixy</item>
+        <item>xiaoqi</item>
+        <item>vixf</item>
+        <item>xiaomei</item>
+        <item>xiaolin</item>
+        <item>xiaorong</item>
+        <item>xiaoqian</item>
+        <item>xiaokun</item>
+        <item>xiaoqiang</item>
+        <item>vixying</item>
+        <item>xiaoxin</item>
+        <item>nannan</item>
+        <item>vils</item>
+    </string-array>
+    <string-array name="voicer_local_entries">
+        <item>小燕</item>
+        <item>小峰</item>
+    </string-array>
+    <string-array name="voicer_local_values">
+        <item>xiaoyan</item>
+        <item>xiaofeng</item>
+    </string-array>
+    <string-array name="stream_entries">
+        <item>通话</item>
+        <item>系统</item>
+        <item>铃声</item>
+        <item>音乐</item>
+        <item>闹铃</item>
+        <item>通知</item>
+    </string-array>
+    <string-array name="stream_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string formatted="false" name="tts_toast_format">缓冲进度为%d%%，播放进度为%d%%</string>
+    <!-- 语言 -->
+    <string-array name="language_entries">
+        <item>普通话</item>
+        <item>粤语</item>
+        <item>河南话</item>
+        <item>英语</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>mandarin</item>
+        <item>cantonese</item>
+        <item>henanese</item>
+        <item>en_us</item>
+    </string-array>
+    <!-- 标点符号 -->
+    <string-array name="punc_entries">
+        <item>有标点</item>
+        <item>无标点</item>
+    </string-array>
+    <string-array name="punc_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <!-- 唤醒 -->
+    <string name="example_explain_wake">唤醒是指通过说出特定的唤醒词来唤醒处于休眠状态下的设备，又分为唤醒和唤醒+识别。</string>
+    <string name="wake_demo_hint">请点击“开始唤醒”后读出您资源所带的唤醒词（本示例为“讯飞语音”），当引擎计算得分大于您设置的门限值时，即可进行唤醒。</string>
+    <string name="oneshot_demo_hint">请点击“唤醒+识别”后读出您资源所带的唤醒词（本示例为“讯飞语音”）+语法中指定的识别对象（本示例为“张三|李四|张海洋”，语法定义详见demo工程的asset/call.bnf文件），当引擎计算得分大于您设置的门限值时，即可进行唤醒+识别。</string>
+    <string name="default_wake_resource_hint">（默认资源中唤醒词：讯飞语音、讯飞语点）</string>
+    	
+</resources>
+

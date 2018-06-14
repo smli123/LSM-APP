@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical" >
+
+    <include
+         android:id="@+id/commontitlebar"  
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         layout="@layout/view_common_titlebar"/> 
+         
+	<RelativeLayout 
+        android:id="@+id/image_head" 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:paddingTop="10dp"
+    	android:paddingBottom="10dp"
+    	android:layout_below="@+id/commontitlebar"> 
+    	
+	    <TextView
+	        android:id="@+id/textVer"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:textSize="@dimen/text_size_midnormal"
+	        android:text="@null" 
+	        android:textColor="@color/white"
+	        />
+    </RelativeLayout>    
+         
+     <RelativeLayout 
+        android:id="@+id/image_background" 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="10dp"
+    	android:layout_below="@+id/image_head"> 
+	    <ImageView
+	        android:id="@+id/imageView_log"
+        	android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:contentDescription="@null"
+	        android:layout_centerInParent="true"
+	        android:src="@drawable/smp_welcome_background"
+	        android:visibility="visible" />    	
+    </RelativeLayout>
+
+
+
+     <RelativeLayout 
+        android:id="@+id/image_footer" 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_alignParentBottom="true"> 
+    	
+	    <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:textSize="@dimen/text_size_midnormal"
+	        android:text="@string/version_notify" 
+	        android:textColor="@color/white"/>
+
+	    <TextView
+	        android:id="@+id/textView2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/textView1"
+	        android:textSize="@dimen/text_size_samll"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="5dp"
+	        android:textColor="@color/white"
+	        android:text="@string/version_right" />
+	             
+        
+    </RelativeLayout>	    
+
+</RelativeLayout>

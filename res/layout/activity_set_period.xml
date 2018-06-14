@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/commom_bg_color" >
+    <include
+        android:id="@+id/commontitlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/view_common_titlebar" />    
+ 	<RelativeLayout
+	    android:id="@+id/layout_period"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+	    android:layout_marginBottom="10dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="10dp">     
+	    <ListView
+	          android:id="@+id/week_list"
+	          android:layout_width="match_parent"
+	          android:layout_height="wrap_content"
+		      android:divider="@drawable/list_item_diliver"
+		      android:dividerHeight="1px">
+		 </ListView>
+	</RelativeLayout> 
+</LinearLayout>

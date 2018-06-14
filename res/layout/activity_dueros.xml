@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/commom_bg_color">
+    
+    <include
+          android:id="@+id/commontitlebar"  
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          layout="@layout/view_common_titlebar"
+          android:layout_alignParentTop="true"/>        
+        
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/commontitlebar" >
+        
+    <LinearLayout
+        android:id="@+id/sv_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical" >
+        
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+	        	<Button
+		            android:id="@+id/btn_scan"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="20dp"
+			        android:background="@drawable/btn_selector"  
+			        android:textColor="@color/white"
+	       			android:textSize="@dimen/text_size_larsamll"
+	       			android:layout_centerInParent="true"
+			        android:text="自动获取IP地址"
+			        android:visibility="visible" />
+	        </RelativeLayout>
+        	            
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+			    <LinearLayout
+			        android:id="@+id/ll_ip_address"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content" >
+			        
+				    <TextView
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:textColor="@color/black"
+				        android:text="智能音响IP地址：" />
+				
+				    <TextView
+				        android:id="@+id/et_ip_address"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:clickable="false"
+				        android:text="@null"
+				        android:textColor="@color/black" />
+			    
+			    </LinearLayout>
+	        </RelativeLayout>
+	        
+            <ImageView
+		        android:layout_width="match_parent"
+		        android:layout_height="0.5dp"
+		        android:layout_marginLeft="@dimen/margin_10dip"
+		        android:layout_marginRight="@dimen/margin_10dip"
+		        android:background="@color/lightwhite"        
+		        android:contentDescription="@null" />
+            
+	        <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+	
+			    <LinearLayout
+			        android:id="@+id/ll_moduleid"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content" >
+			        
+			       	<TextView
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:textColor="@color/black"
+				        android:text="默认模块ID：" />
+				
+				    <TextView
+			        	android:id="@+id/tv_modulename"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:textColor="@color/black"
+				        android:text="648044"
+				        android:visibility="visible" />
+				    
+				    <TextView
+			        	android:id="@+id/tv_moduleid"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:textColor="@color/black"
+				        android:text="648044"
+				        android:visibility="gone" />
+			
+				    <Spinner
+				        android:id="@+id/sp_moduleid"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_weight="1"
+				        android:textColor="@color/black"
+				        android:visibility="gone" />
+				    
+				    <Button
+			            android:id="@+id/btn_send"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:textColor="@color/black"
+				        android:text="Save" 
+				        android:visibility="gone" />
+				    
+			    </LinearLayout>
+	        </RelativeLayout>
+            
+               
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+            
+            
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+	        	<TextView
+	        	    android:id="@+id/tv_cmd_zhuwo_kongtiao"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:text="主卧空调"
+	            	android:layout_alignParentLeft="true"
+	        	    android:textColor="@color/black" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_name_zhuwo_kongtiao"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:layout_alignParentRight="true"
+	        	    android:layout_marginLeft="10dp"
+	        	    android:hint="点击选择设备"
+	        	    android:textColor="@color/black"
+	        	    android:textColorHint="@color/blue" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_moduleid_zhuwo_kongtiao"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+		            android:visibility="gone"/>
+	        	
+        	</RelativeLayout>
+        	    
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+             
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+	        	<TextView
+	        	    android:id="@+id/tv_cmd_ciwo_kongtiao"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:text="次卧空调"
+	            	android:layout_alignParentLeft="true"
+	        	    android:textColor="@color/black" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_name_ciwo_kongtiao"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:layout_alignParentRight="true"
+	        	    android:layout_marginLeft="10dp"
+	        	    android:hint="点击选择设备"
+	        	    android:textColor="@color/black"
+	        	    android:textColorHint="@color/blue" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_moduleid_ciwo_kongtiao"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+		            android:visibility="gone"/>
+	        	
+        	</RelativeLayout>
+        	    
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+                      
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+	        	<TextView
+	        	    android:id="@+id/tv_cmd_shufang_kongtiao"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:text="书房空调"
+	            	android:layout_alignParentLeft="true"
+	        	    android:textColor="@color/black" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_name_shufang_kongtiao"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:layout_alignParentRight="true"
+	        	    android:layout_marginLeft="10dp"
+	        	    android:hint="点击选择设备"
+	        	    android:textColor="@color/black"
+	        	    android:textColorHint="@color/blue" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_moduleid_shufang_kongtiao"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+		            android:visibility="gone"/>
+	        	
+        	</RelativeLayout>
+        	    
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+            
+                   
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+	        	<TextView
+	        	    android:id="@+id/tv_cmd_keting_kongtiao"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:text="客厅空调"
+	            	android:layout_alignParentLeft="true"
+	        	    android:textColor="@color/black" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_name_keting_kongtiao"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:layout_alignParentRight="true"
+	        	    android:layout_marginLeft="10dp"
+	        	    android:hint="点击选择设备"
+	        	    android:textColor="@color/black"
+	        	    android:textColorHint="@color/blue" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_moduleid_keting_kongtiao"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+		            android:visibility="gone"/>
+	        	
+        	</RelativeLayout>
+        	    
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+            
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+	        	<TextView
+	        	    android:id="@+id/tv_cmd_zhuwo_curtain"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:text="主卧窗帘"
+	            	android:layout_alignParentLeft="true"
+	        	    android:textColor="@color/black" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_name_zhuwo_curtain"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:layout_alignParentRight="true"
+	        	    android:layout_marginLeft="10dp"
+	        	    android:hint="点击选择设备"
+	        	    android:textColor="@color/black"
+	        	    android:textColorHint="@color/blue" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_moduleid_zhuwo_curtain"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+		            android:visibility="gone"/>
+	        	
+        	</RelativeLayout>
+        	    
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+             
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+	        	<TextView
+	        	    android:id="@+id/tv_cmd_ciwo_curtain"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:text="次卧窗帘"
+	            	android:layout_alignParentLeft="true"
+	        	    android:textColor="@color/black" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_name_ciwo_curtain"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	            	android:layout_marginLeft="10dp" 
+	            	android:layout_alignParentRight="true"
+	        	    android:textColor="@color/black" 
+	        	    android:textColorHint="@color/blue"
+	        	    android:hint="点击选择设备" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_moduleid_ciwo_curtain"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+		            android:visibility="gone"/>
+	        	
+        	</RelativeLayout>
+        	    
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+                      
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+	        	<TextView
+	        	    android:id="@+id/tv_cmd_shufang_curtain"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:text="书房窗帘"
+	            	android:layout_alignParentLeft="true"
+	        	    android:textColor="@color/black" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_name_shufang_curtain"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	            	android:layout_marginLeft="10dp" 
+	            	android:layout_alignParentRight="true"
+	        	    android:textColor="@color/black" 
+	        	    android:textColorHint="@color/blue"
+	        	    android:hint="点击选择设备" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_moduleid_shufang_curtain"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+		            android:visibility="gone"/>
+	        	
+        	</RelativeLayout>
+        	    
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+            
+                   
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+	        	<TextView
+	        	    android:id="@+id/tv_cmd_keting_curtain"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:text="客厅窗帘"
+	            	android:layout_alignParentLeft="true"
+	        	    android:textColor="@color/black" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_name_keting_curtain"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	            	android:layout_marginLeft="10dp" 
+	            	android:layout_alignParentRight="true"
+	        	    android:textColor="@color/black" 
+	        	    android:textColorHint="@color/blue"
+	        	    android:hint="点击选择设备" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_moduleid_keting_curtain"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+		            android:visibility="gone"/>
+	        	
+        	</RelativeLayout>
+        	    
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+	        	<TextView
+	        	    android:id="@+id/tv_cmd_zhuwo_smartplug"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:text="主卧插座"
+	            	android:layout_alignParentLeft="true"
+	        	    android:textColor="@color/black" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_name_zhuwo_smartplug"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:layout_alignParentRight="true"
+	        	    android:layout_marginLeft="10dp"
+	        	    android:hint="点击选择设备"
+	        	    android:textColor="@color/black"
+	        	    android:textColorHint="@color/blue" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_moduleid_zhuwo_smartplug"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+		            android:visibility="gone"/>
+	        	
+        	</RelativeLayout>
+        	    
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+             
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+	        	<TextView
+	        	    android:id="@+id/tv_cmd_ciwo_smartplug"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:text="次卧插座"
+	            	android:layout_alignParentLeft="true"
+	        	    android:textColor="@color/black" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_name_ciwo_smartplug"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	            	android:layout_marginLeft="10dp" 
+	            	android:layout_alignParentRight="true"
+	        	    android:textColor="@color/black" 
+	        	    android:textColorHint="@color/blue"
+	        	    android:hint="点击选择设备" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_moduleid_ciwo_smartplug"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+		            android:visibility="gone"/>
+	        	
+        	</RelativeLayout>
+        	    
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+                      
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+	        	<TextView
+	        	    android:id="@+id/tv_cmd_shufang_smartplug"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:text="书房插座"
+	            	android:layout_alignParentLeft="true"
+	        	    android:textColor="@color/black" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_name_shufang_smartplug"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	            	android:layout_marginLeft="10dp" 
+	            	android:layout_alignParentRight="true"
+	        	    android:textColor="@color/black" 
+	        	    android:textColorHint="@color/blue"
+	        	    android:hint="点击选择设备" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_moduleid_shufang_smartplug"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+		            android:visibility="gone"/>
+	        	
+        	</RelativeLayout>
+        	    
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+            
+                   
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" >
+
+	        	<TextView
+	        	    android:id="@+id/tv_cmd_keting_smartplug"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:text="客厅插座"
+	            	android:layout_alignParentLeft="true"
+	        	    android:textColor="@color/black" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_name_keting_smartplug"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	            	android:layout_marginLeft="10dp" 
+	            	android:layout_alignParentRight="true"
+	        	    android:textColor="@color/black" 
+	        	    android:textColorHint="@color/blue"
+	        	    android:hint="点击选择设备" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_moduleid_keting_smartplug"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+		            android:visibility="gone"/>
+	        	
+        	</RelativeLayout>
+        	    
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+            
+            <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_margin="10dp" 
+	            android:visibility="gone">
+
+	        	<TextView
+	        	    android:id="@+id/tv_cmd_keting_pc"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	        	    android:text="电脑"
+	            	android:layout_alignParentLeft="true"
+	        	    android:textColor="@color/black" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_name_keting_pc"
+	        	    android:layout_width="wrap_content"
+	        	    android:layout_height="wrap_content"
+	            	android:layout_marginLeft="10dp" 
+	            	android:layout_alignParentRight="true"
+	        	    android:textColor="@color/black" 
+	        	    android:textColorHint="@color/blue"
+	        	    android:hint="点击选择设备" />
+
+	        	<TextView
+	        	    android:id="@+id/tv_moduleid_keting_pc"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+		            android:visibility="gone"/>
+	        	
+        	</RelativeLayout>
+        	
+            <ImageView
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:layout_marginLeft="@dimen/margin_10dip"
+			        android:layout_marginRight="@dimen/margin_10dip"
+			        android:background="@color/lightwhite"        
+			        android:contentDescription="@null" />
+            
+            
+	        	<TextView
+	        	    android:id="@+id/iat_text"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content" 
+	            	android:layout_marginLeft="10dp"
+	            	android:textColor="@color/black" 
+		            android:visibility="visible"/>
+	        	
+            <Button
+			        android:id="@+id/btn_wakeup"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="20dp"
+			        android:background="@drawable/btn_selector"  
+			        android:textColor="@color/white"
+	       			android:textSize="@dimen/text_size_larsamll"
+	       			android:layout_centerInParent="true"
+			        android:text="启动语音控制" 
+			        android:visibility="gone"/>
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
+</RelativeLayout>

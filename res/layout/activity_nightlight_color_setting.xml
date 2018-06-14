@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+    
+<!--     <include
+          android:id="@+id/plugdetailbar"  
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          layout="@layout/view_common_titlebar"/>    -->
+          
+    <RelativeLayout
+          android:id="@+id/rlRed"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="2dp"
+          android:layout_marginRight="2dp"
+          android:layout_marginTop="2dp">
+			<ImageView
+			    android:id="@+id/imgRed"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:contentDescription="@null"
+	            android:scaleType="centerInside" 
+	            android:src="@drawable/red_32"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentLeft="true"/> 
+             
+		    <SeekBar
+		        android:id="@+id/seekBarRed"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:progress="1"
+		        android:max="255"
+				android:paddingLeft="5dip"
+				android:paddingRight="5dip"        
+				android:focusable="true"  
+				android:maxHeight="8dp"  
+				android:minHeight="8dp" 		        
+				android:progressDrawable="@drawable/po_seekbar_red"  
+        		android:thumb="@drawable/seekbar_thumb"
+        		android:layout_marginLeft="10dp"
+		        android:layout_centerInParent="true"
+		        android:layout_toRightOf="@+id/imgRed" />
+	
+	       	        	                    	
+    </RelativeLayout>
+    
+    <RelativeLayout
+          android:id="@+id/rlGreen"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/rlRed"
+          android:layout_marginTop="20dp"
+          android:layout_marginLeft="2dp"
+          android:layout_marginRight="2dp">
+			<ImageView
+			    android:id="@+id/imgGreen"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:contentDescription="@null"
+	            android:scaleType="centerInside" 
+	            android:src="@drawable/green_32"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentLeft="true"/>  
+		    <SeekBar
+		        android:id="@+id/seekBarGreen"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:progress="1"
+		        android:max="255"
+				android:focusable="true"  
+				android:maxHeight="8dp"  
+				android:minHeight="8dp" 		        
+				android:progressDrawable="@drawable/po_seekbar_green"  
+        		android:thumb="@drawable/seekbar_thumb"		        
+        		android:layout_marginLeft="10dp"
+				android:paddingLeft="10dip"
+				android:paddingRight="10dip"        		
+		        android:layout_centerInParent="true"
+		        android:layout_toRightOf="@+id/imgGreen" />
+	       	<TextView
+	       	    android:id="@+id/txtGreenValue"
+	       	    android:layout_width="wrap_content"
+	       	    android:layout_height="wrap_content"
+	       	    android:background="@null"
+	       	    android:text="@null"
+	       	    android:textColor="@color/black"
+	       	    android:layout_alignParentRight="true"
+	       	    android:layout_centerVertical="true"
+	       	    android:textSize="@dimen/text_size_midsamll"
+	       	    android:visibility="gone"/>		    	                    	
+    </RelativeLayout>   
+    
+    <RelativeLayout
+          android:id="@+id/rlBlue"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/rlGreen"
+          android:layout_marginTop="20dp"
+          android:layout_marginLeft="2dp"
+          android:layout_marginRight="2dp">
+			<ImageView
+			    android:id="@+id/imgBlue"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:contentDescription="@null"
+	            android:scaleType="centerInside" 
+	            android:src="@drawable/blue_32"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentLeft="true"/>  
+		    <SeekBar
+		        android:id="@+id/seekBarBlue"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:progress="1"
+		        android:max="255"
+				android:focusable="true"  
+				android:maxHeight="8dp"  
+				android:minHeight="8dp" 		        
+				android:progressDrawable="@drawable/po_seekbar_blue"  
+        		android:thumb="@drawable/seekbar_thumb"		        
+        		android:layout_marginLeft="10dp"
+				android:paddingLeft="10dip"
+				android:paddingRight="10dip"        		
+		        android:layout_centerInParent="true"
+		        android:layout_toRightOf="@+id/imgBlue" />
+	       	<TextView
+	       	    android:id="@+id/txtBlueValue"
+	       	    android:layout_width="wrap_content"
+	       	    android:layout_height="wrap_content"
+	       	    android:background="@null"
+	       	    android:text="@null"
+	       	    android:textColor="@color/black"
+	       	    android:layout_alignParentRight="true"
+	       	    android:layout_centerVertical="true"
+	       	    android:textSize="@dimen/text_size_midsamll"
+	       	    android:visibility="gone"/>		    	                    	
+    </RelativeLayout> 
+    
+    <RelativeLayout
+          android:id="@+id/rlBright"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/rlBlue"
+          android:layout_marginTop="20dp"
+          android:layout_marginLeft="2dp"
+          android:layout_marginRight="2dp"
+          android:visibility="invisible">
+			<ImageView
+			    android:id="@+id/imgBright"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:contentDescription="@null"
+	            android:scaleType="centerInside" 
+	            android:src="@drawable/brightness"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentLeft="true"/>  
+		    <SeekBar
+		        android:id="@+id/seekBarBright"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:progress="1"
+		        android:max="255"
+				android:focusable="true"  
+				android:maxHeight="8dp"  
+				android:minHeight="8dp" 		        
+				android:progressDrawable="@drawable/po_seekbar_white"  
+        		android:thumb="@drawable/seekbar_thumb"		        
+        		android:layout_marginLeft="10dp"
+				android:paddingLeft="10dip"
+				android:paddingRight="10dip"        		
+		        android:layout_centerInParent="true"
+		        android:layout_toRightOf="@+id/imgBright" />
+	       	<TextView
+	       	    android:id="@+id/txtBrightValue"
+	       	    android:layout_width="wrap_content"
+	       	    android:layout_height="wrap_content"
+	       	    android:background="@null"
+	       	    android:text="@null"
+	       	    android:textColor="@color/black"
+	       	    android:layout_alignParentRight="true"
+	       	    android:layout_centerVertical="true"
+	       	    android:textSize="@dimen/text_size_midsamll"
+	       	    android:visibility="gone"/>		    	                    	
+    </RelativeLayout>
+    
+
+    
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"    
+        android:layout_below="@+id/rlBright"   
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp" 
+  		android:layout_gravity="center"
+  		android:text="@string/smartplug_esc" 
+  		android:textColor="@color/white"
+  		android:textSize="@dimen/text_size_larsamll"
+  		android:background="@drawable/btn_selector" 
+        />
+    
+
+</RelativeLayout>    

@@ -1,0 +1,151 @@
+<!-- 作用：适应手机屏幕代码 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0;  minimum-scale=1.0; maximum-scale=2.0"/>
+<meta name="MobileOptimized" content="240"/>
+<title></title>
+</head>
+<style>
+img {
+	max-width: 100%;
+	text-align: center;
+}
+strong {color: #008A3E;}
+.divCenter {
+	text-align:center
+	}
+</style>
+
+<body>
+<br>
+<p>智慧家居APP有三种方式来控制智能插座：Internet方式、WiFi直连方式、摇一摇方式/批量管理。</p>
+<p>根据控制方式来介绍APP的各项使用功能。</p>
+<p><h3>1.	登录/控制方式选择
+</h3>
+<p> <div class="divCenter"><img src="pics/image0001.png"/><br>
+  图1 登录界面<br></div>
+  手机启动后，进入登录界面，登录界面分三种方式进行登录，分别为：登录、WiFi直连、摇一摇。<br>
+  说明：<br>
+  1）登录：即Internet方式。<br>
+  要求：手机必须连接到Internet网络上。<br>
+  智能插座硬件启动Internet模式，可以通过APP对智能插座的配置操作，使得智能插座启动Internet模式。<br>
+  2）WiFi直连：手机不需要连接到Internet网络上，可以使用APP直接连接到智能插座，此时智能插座启动AP模式。<br>
+  智能插座默认出厂方式为AP模式。可以通过复位来恢复智能插座的启动模式为AP模式。<br>
+  3）摇一摇：即通过左右摇一摇手机的方式来批量控制多个智能插座的电源开/关、小夜灯开/关、USB开/关。<br>
+前提：手机不需要连接到Internet网络上，但是手机和要控制的智能插座必须在同一个无线路由器下，同时智能插座必须已经启动Internet模式。</p>
+<p><h3>2.	控制方式1：Internet方式</h3><br>
+  1）设备和APP连接方式示意图<br>
+  <br>
+  <div class="divCenter"><img src="pics/image0002.gif"/><br>
+  图2 Internnet 连接方式</div><br>
+  前提：手机连接到Internet网络上。例如：打开3G/4G/5G数据业务，或者连接到能上网的无线路由器上。<br>
+  手机界面：<br>
+  <div class="divCenter"><img src="pics/image0003.png"/>
+  <br>
+  图3 登录界面</div></p>
+<p>2）功能介绍<br>
+  ⑴注册<br>
+  点击登录界面（图表3）注册按钮，根据提示输入用户名、密码、密码确认、电子邮箱，即可完成注册操作。<br>
+  ⑵登录<br>
+  使用注册的用户名和密码，选择“登录”，即可登录到服务器。<br>
+  3）插座功能<br>
+  ⑴列表显示<br>
+<div class="divCenter"><img src="pics/image0004.png"/>
+  <br>
+  图4 插座</div><br>
+  列出用户（windhz）下可管理的所有插座。<br>
+  各种图标所代表的含义：<br>
+<img src="pics/image10001.png"/>  ：智能插座<br>
+<img src="pics/image10002.png"/>  ：插座处于在线状态。同时底色为白色<br>
+<img src="pics/image10003.png"/>  ：插座处于离线状态。同时底色为灰色<br>
+<img src="pics/image10004.png"/>  ：插座存在1个即以上定时任务；若没有定时任务，就不显示该图标<br>
+<img src="pics/image10005.png"/>  ：插座中的电源开关处于打开的状态<br>
+<img src="pics/image10006.png"/>  ：插座中的电源开关处于关闭的状态<br>
+<img src="pics/image10007.png"/>  ：插座中的夜灯开关处于打开的状态<br>
+<img src="pics/image10008.png"/>  ：插座中的夜灯开关处于关闭的状态<br>
+<img src="pics/image10009.png"/>  ：插座中的USB开关处于打开的状态<br>
+<img src="pics/image10010.png"/>  ：插座中的USB开关处于关闭的状态<br>
+<img src="pics/image10011.png"/>  ：插座中的家长锁开关处于打开的状态<br>
+<img src="pics/image10012.png"/>  ：插座中的家长锁开关处于关闭的状态</p>
+<p>⑵增加功能<br>
+<div class="divCenter"><img src="pics/image0005.png"/>
+  <br>
+  图5 扫描结果</div><br>
+  点击图4中的增加按钮后，点击刷新按钮，会自动扫描周围的智能插座，并将扫描结果显示在下方列表中。<br>
+  <div class="divCenter"><img src="pics/image0006.png"/>
+  <br>
+  图6 配置需要添加的智能插座</div><br>
+  选择需要加入的智能插座，系统会自动与智能插座交互，获取到智能插座的信息，用户只需填写智能插座所属的无线路由器对应的WiFi登录密码即可。</p>
+<p>⑶删除功能<br>
+<div class="divCenter"><img src="pics/image0007.png"/>
+  <br>
+  图7 删除插座和修改插座名字</div><br>
+  长按插座，会自动弹出菜单“改名称”、“删除”。选择删除按钮，可以删除该账户下的智能插座。<br>
+  ⑷修改智能插座名字<br>
+  长按插座，会自动弹出菜单“改名称”、“删除”。选择改名字按钮，可以修改该智能插座的名字。<br><div class="divCenter"><img src="pics/image0008.png"/>
+  <br>  
+  图8修改插座名字</div><br>
+  ⑸智能插座控制功能<br>
+  <div class="divCenter"><img src="pics/image0009.png"/><img src="pics/image0009a.png"/><img src="pics/image0009b.png"/>
+  <br>
+  图9 智能插座控制中心</div><br>
+  控制功能包括：<br>
+  ①打开/关闭：电源、夜灯、USB、家长锁（图9）<br>
+  ②夜灯配色：夜灯处于打开状态下，可以修改夜灯的红/绿/蓝的值（图9）<br>
+  ③定时任务：可以增加/删除/使能 电源/夜灯/USB 的定时任务，可以任意组合使用。 全部的定时任务数量最多支持10个。删除定时任务是通过手指左右移动待删除的定时任务的列表，结果如图9-3所示，出现垃圾箱图标，然后点击垃圾箱图标，即可删除定时任务。</p>
+<p>⑹查看智能插座详细信息<br>
+<div class="divCenter"><img src="pics/image0010.png"/>
+  <br>
+  图10 智能插座的详细信息</div><br>
+  通过详细信息，查看给智能插座分配的MAC地址、IP地址信息<br>
+  4）管理功能<br>
+  <div class="divCenter"><img src="pics/image0011.png"/>
+  <br>
+  图11 账号的详细信息</div><br>
+  ⑴管理账号的密码，Email地址信息。自动检查APP的最新版本，给鑫思度科技公司客户服务部反馈意见和建议，关于等信息。</p>
+<p>⑵退出登录<br>
+  图11中点击退出登录，即可退出并进入登录界面。</p>
+<p><h3>3.	控制方式2：WiFi直连方式</h3><br>
+  1）设备和APP连接方式示意图<br>
+  <div class="divCenter"><img src="pics/image0012.gif"/>
+  <br>
+  图12 WiFi直连方式</div><br>
+  手机界面<br>
+  <div class="divCenter"><img src="pics/image0013.png"/>
+  <br>
+  图13 WiFi直连</div><br>
+  2）进入WiFi直连模式下，系统会自动扫描周围处于AP模式的智能插座，点击想要管理的智能插座，直接进入插座管理界面，便可对智能插座进行管理。<br>
+  控制功能同图9。</p>
+<p><h3>4.	控制方式3：摇一摇方式/批量管理</h3><br>
+  1）设备和APP连接方式示意图<br>
+  <div class="divCenter"><img src="pics/image0014.gif"/>
+  <br>
+  图14 摇一摇方式</div><br>
+  手机界面<br>
+  <div class="divCenter"><img src="pics/image0015.png"/>
+  <br>
+  图15 摇一摇</div><br>
+  2）进入摇一摇模式，点击扫描按钮，系统会自动扫描周围处于同一个无线路由器下的智能插座，选择需要管理的智能插座（可多选），并选择操作类型（电源、夜灯、USB），可通过摇动手机实现批量操作智能插座的功能。（见图16）<br>
+  <div class="divCenter"><img src="pics/image0016.png"/>
+  <br>
+  图16 摇一摇批量控制界面</div>
+  <br>
+  说明：<br>
+  扫描结果列表中，点击单个智能插座，可以对单个插座进行单独控制操作。</p>
+<p><h3>5.	FAQ常见问题解答</h3>
+  1）忘记密码怎么办？<br>
+  进入登录界面，点击右下角的忘记密码按钮，根据提示完成初始化密码操作，初始的密码会自动发到你的注册邮箱中。<br>
+  2）执行智能扫描时，却扫描不到智能插座？<br>
+  请务必在手机Android系统的配置中打开系统对“智慧家居APP”的定位功能，否则可能会出现扫描不到智能插座的信息。<br>
+  3）登录界面中，输入了用户名和密码，却始终登录不上服务器？<br>
+  请检查：<br>
+  ①手机打开了数据功能，获取连接到了能上网的无线路由器上，保证上网正常。<br>
+  ②APP在配置智能插座过程也会进行无线路由器和智能插座的WiFi热点切换，先确认一下当前连接的无线路由器SSID。<br>
+  ③用户名和密码的大小写是否正确。<br>
+</p>
+
+</body>
+
+</html>

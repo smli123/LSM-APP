@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+	      <TableRow
+	          android:id="@+id/tlRow1"
+	          android:padding="0dp"
+	          android:gravity="center">
+              <ImageView
+                  android:id="@+id/clColor1_1"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:background="@drawable/green_32"
+                  android:paddingLeft="10dp"
+                  android:paddingRight="10dp"
+                  android:contentDescription="@null">
+              </ImageView>
+              <ImageView
+                  android:id="@+id/clColor1_2"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:background="@drawable/green_32"
+                  android:text="@null">
+              </ImageView> 
+              <ImageView
+                  android:id="@+id/clColor1_3"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:background="@drawable/green_32"
+                  android:text="@null" >
+              </ImageView> 
+              <ImageView
+                  android:id="@+id/clColor1_4"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:background="@drawable/green_32"
+                  android:text="@null" >
+              </ImageView> 
+              <ImageView
+                  android:id="@+id/clColor1_5"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:background="@drawable/green_32"
+                  android:text="@null" >
+              </ImageView>                                                     	          
+	          
+	      </TableRow>
+	      
+		  <TableRow
+	          android:id="@+id/tlRow2"
+	          android:padding="2dp"
+	          android:gravity="center">
+              <ImageView
+                  android:id="@+id/clColor2_1"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:background="@drawable/green_32"
+                  android:contentDescription="@null">
+              </ImageView>
+              <ImageView
+                  android:id="@+id/clColor2_2"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:background="@drawable/green_32"
+                  android:text="@null">
+              </ImageView> 
+              <ImageView
+                  android:id="@+id/clColor2_3"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:background="@drawable/green_32"
+                  android:text="@null" >
+              </ImageView> 
+              <ImageView
+                  android:id="@+id/clColor2_4"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:background="@drawable/green_32"
+                  android:text="@null" >
+              </ImageView> 
+              <ImageView
+                  android:id="@+id/clColor2_5"
+                  android:layout_width="50dp"
+                  android:layout_height="50dp"
+                  android:background="@drawable/green_32"
+                  android:text="@null" >
+              </ImageView>                                                   	          
+	          
+	      </TableRow>	      
+    </TableLayout>
+   
