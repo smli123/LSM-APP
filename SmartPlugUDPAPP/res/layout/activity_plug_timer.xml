@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/commom_bg_color">
+
+    <include
+        android:id="@+id/commontitlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/view_common_titlebar" />
+    
+	<RelativeLayout
+	    android:id="@+id/layout_poweron_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/commom_bg_color"
+        android:layout_below="@+id/commontitlebar">
+       	
+		<RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/white"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp">       	
+	       	<RelativeLayout
+	       	    android:id="@+id/layout_poweron_switcher"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_marginBottom="10dp"
+		        android:background="@color/white">
+		        
+			    <ImageView
+			        android:id="@+id/image_icon_enable"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:src="@drawable/smp_power_on_small"
+			        android:layout_centerVertical="true"
+			        android:contentDescription="@null"
+			        android:layout_marginLeft="5dp"/>	
+	       	    
+		        <TextView
+		            android:id="@+id/txtCheckPoweron" 
+		       	    android:layout_width="wrap_content"
+		       	    android:layout_height="wrap_content"
+		       	    android:background="@null"
+		       	    android:layout_marginLeft="5dp"
+		       	    android:text="@string/timer_task_poweron"
+		       	    android:textColor="@color/black"
+		       	    android:layout_toRightOf="@+id/image_icon_enable"
+		       	    android:layout_centerVertical="true"
+		       	    android:textSize="@dimen/text_size_larsamll"/>
+				<com.thingzdo.util.ThingzdoCheckBox 
+		        	android:id="@+id/imgCheckPoweron" 
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content" 
+		        	android:layout_marginLeft="5dp"
+		        	android:layout_centerVertical="true"
+		           	android:layout_toRightOf="@+id/txtCheckPoweron"
+		           	android:visibility="gone"/>	        
+	    
+		     </RelativeLayout>
+		     
+		    <ImageView
+		        android:id="@+id/image_sep_1"
+		        android:layout_width="match_parent"
+		        android:layout_height="0.5dp"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp"
+		        android:layout_below="@+id/layout_poweron_switcher"
+		        android:background="@color/lightwhite"        
+		        android:contentDescription="@null" />       	
+		     
+		    <RelativeLayout
+		        android:id="@+id/lay_poweron_time"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/common_list_selector"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"		        
+		        android:layout_below="@+id/image_sep_1">
+		        
+			        <TextView
+			            android:id="@+id/txtPoweronTime" 
+			       	    android:layout_width="wrap_content"
+			       	    android:layout_height="wrap_content"
+			       	    android:background="@null"
+			       	    android:layout_centerVertical="true"
+			       	    android:text="@string/timer_task_inittime"
+			       	    android:layout_marginLeft="5dp"
+			       	    android:textColor="@color/black"
+			       	    android:textSize="@dimen/text_size_larsamll"
+			       	    android:layout_alignParentLeft="true"/>	
+			       	    
+					<ImageView
+			            android:id="@+id/img_poweron_more"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:layout_alignParentRight="true"
+			            android:contentDescription="@null"
+			            android:scaleType="centerCrop"
+			            android:layout_marginRight="@dimen/listitem_user_icon_horizaontal_padding"
+			            android:src="@drawable/smp_more" />	
+		    </RelativeLayout>    
+		</RelativeLayout>       	
+	</RelativeLayout> 
+
+	<RelativeLayout
+	    android:id="@+id/layout_poweroff_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_poweron_header"
+        android:background="@color/white"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="10dp"> 	
+		<RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/white">
+			<RelativeLayout
+	       	    android:id="@+id/layout_poweroff_switcher"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+			    android:layout_marginTop="10dp" 	        
+			    android:layout_marginBottom="10dp"
+		        android:background="@color/white">
+					
+			    <ImageView
+			        android:id="@+id/image_icon_disenable"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:src="@drawable/smp_task_power_off"
+			        android:contentDescription="@null"
+			        android:layout_centerVertical="true"
+			        android:layout_marginLeft="5dp"/>	
+			        			    
+		        <TextView
+		            android:id="@+id/txtCheckPoweroff" 
+		       	    android:layout_width="wrap_content"
+		       	    android:layout_height="wrap_content"
+		       	    android:background="@null"
+		       	    android:layout_toRightOf="@+id/image_icon_disenable"
+		       	    android:layout_centerVertical="true"
+		       	    android:layout_marginLeft="5dp"
+		       	    android:text="@string/timer_task_poweroff"
+		       	    android:textColor="@color/black"
+		       	    android:textSize="@dimen/text_size_larsamll"/>
+				<com.thingzdo.util.ThingzdoCheckBox 
+		        	android:id="@+id/imgCheckPoweroff" 
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content" 
+		        	android:layout_marginLeft="5dp"
+		        	android:layout_centerVertical="true"
+		           	android:layout_toRightOf="@+id/txtCheckPoweroff"
+		           	android:visibility="gone"/>	   	        
+	    
+		     </RelativeLayout>
+		     
+		    <ImageView
+		        android:id="@+id/image_sep_2"
+		        android:layout_width="match_parent"
+		        android:layout_height="0.5dp"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp"
+		        android:layout_below="@+id/layout_poweroff_switcher"
+		        android:background="@color/lightwhite"        
+		        android:contentDescription="@null" />  			    
+	    
+			<RelativeLayout
+		        android:id="@+id/lay_poweroff_time"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+			    android:paddingTop="10dp" 	        
+			    android:paddingBottom="10dp"        
+		        android:background="@drawable/common_list_selector"
+		        android:layout_below="@+id/image_sep_2">
+		        <TextView
+		            android:id="@+id/txtPoweroffTime" 
+		       	    android:layout_width="wrap_content"
+		       	    android:layout_height="wrap_content"
+		       	    android:background="@null"
+		       	    android:layout_centerVertical="true"
+		       	    android:text="@string/timer_task_inittime"
+		       	    android:layout_marginLeft="5dp"
+		       	    android:textSize="@dimen/text_size_larsamll"
+		       	    android:textColor="@color/black"
+		       	    android:layout_alignParentLeft="true"/>	
+		       	    
+				<ImageView
+		            android:id="@+id/img_poweroff_more"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_alignParentRight="true"
+		            android:contentDescription="@null"
+		            android:scaleType="centerCrop"
+		            android:layout_marginRight="@dimen/listitem_user_icon_horizaontal_padding"
+		            android:src="@drawable/smp_more" />	  
+		    </RelativeLayout>	    
+		        
+		</RelativeLayout>
+	</RelativeLayout>
+	
+	<RelativeLayout
+		    android:id="@+id/layout_mac"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/layout_poweroff_header"
+	        android:background="@color/white"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginBottom="10dp"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"> 		
+		<RelativeLayout
+			    android:id="@+id/layout_mac_header"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+			    android:paddingTop="10dp" 	        
+			    android:paddingBottom="10dp"
+			    android:background="@drawable/common_list_selector"> 
+		        
+			    <ImageView
+			        android:id="@+id/image_icon_mac"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:src="@drawable/smp_period"
+			        android:contentDescription="@null"
+			        android:layout_marginLeft="5dp"
+			        android:layout_centerVertical="true"
+			        android:visibility="visible"/>		    
+		    
+		    	<TextView
+			        android:id="@+id/tv_mac"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:layout_centerVertical="true"
+			        android:text="@string/add_plug_mac_address"
+			        android:textSize="@dimen/text_size_larsamll"
+			        android:layout_toRightOf="@+id/image_icon_mac"
+			        android:textColor="@color/black" />
+		    	
+		    	<EditText
+		    	    android:id="@+id/et_mac"
+		    	    android:layout_width="200dp"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_centerVertical="true"
+		    	    android:layout_marginRight="5dp"
+		    	    android:layout_toLeftOf="@+id/image_mac"
+		    	    android:hint="例如 EE:EE:EE:EE:EE:EE"
+		    	    android:inputType="textCapCharacters"
+		    	    android:text="@null"
+		    	    android:textColor="#037BFF"
+		    	    android:textSize="@dimen/text_size_norsamll" />
+		    	
+			    <ImageView
+			        android:id="@+id/image_mac"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_alignParentRight="true"
+		            android:contentDescription="@null"
+		            android:scaleType="centerCrop"
+		            android:layout_marginRight="@dimen/listitem_user_icon_horizaontal_padding"
+		            android:src="@drawable/smp_more"
+		            android:visibility="visible" />
+		    </RelativeLayout>
+				
+			<RelativeLayout
+				    android:id="@+id/ll_mac_low"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@id/layout_mac_header"
+				    android:paddingTop="10dp" 	        
+				    android:paddingBottom="10dp"
+				    android:background="@drawable/common_list_selector"
+				    android:visibility="gone"> 
+			
+			    <ListView 
+			        android:id="@+id/lv_macs"
+			        android:layout_width="match_parent"
+				    android:layout_height="120dp"
+				    android:textSize="15sp" 
+				    android:textColor="@color/black"/>
+			        	    
+			 </RelativeLayout>
+	    </RelativeLayout>
+	
+	<RelativeLayout
+	    android:id="@+id/layout_period"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_mac"
+        android:background="@color/white"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginBottom="10dp"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="10dp"> 		
+	<RelativeLayout
+		    android:id="@+id/layout_period_header"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+		    android:paddingTop="10dp" 	        
+		    android:paddingBottom="10dp"
+		    android:background="@drawable/common_list_selector"> 
+	        
+		    <ImageView
+		        android:id="@+id/image_icon_period"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:src="@drawable/smp_period"
+		        android:contentDescription="@null"
+		        android:layout_marginLeft="5dp"
+		        android:layout_centerVertical="true"
+		        android:visibility="visible"/>		    
+	    
+	    	<TextView
+		        android:id="@+id/tv_period"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="5dp"
+		        android:layout_centerVertical="true"
+		        android:text="@string/timer_task_peroid"
+		        android:textSize="@dimen/text_size_larsamll"
+		        android:layout_toRightOf="@+id/image_icon_period"
+		        android:textColor="@color/black" />
+	    	
+	    	<TextView
+		        android:id="@+id/tv_select_days"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="5dp"
+		        android:layout_centerVertical="true"
+		        android:text="@null"
+		        android:textSize="@dimen/text_size_norsamll"
+		        android:layout_toLeftOf="@+id/image_select_days"
+		        android:layout_marginRight="5dp"
+		        android:textColor="#037BFF" />	    	
+	    	
+		    <ImageView
+		        android:id="@+id/image_select_days"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentRight="true"
+	            android:contentDescription="@null"
+	            android:scaleType="centerCrop"
+	            android:layout_marginRight="@dimen/listitem_user_icon_horizaontal_padding"
+	            android:src="@drawable/smp_more" />			    	
+	    </RelativeLayout>
+			
+    </RelativeLayout>
+    
+	<RelativeLayout
+		    android:id="@+id/layout_period_minute"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/layout_period"
+	        android:background="@color/white"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginBottom="10dp"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"> 		
+		<RelativeLayout
+			    android:id="@+id/layout_period_minute_header"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+			    android:paddingTop="10dp" 	        
+			    android:paddingBottom="10dp"
+			    android:background="@drawable/common_list_selector"> 
+		        
+			    <ImageView
+			        android:id="@+id/image_icon_period_minute"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:src="@drawable/smp_period"
+			        android:contentDescription="@null"
+			        android:layout_marginLeft="5dp"
+			        android:layout_centerVertical="true"
+			        android:visibility="visible"/>		    
+		    
+		    	<TextView
+			        android:id="@+id/tv_period_minute"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:layout_centerVertical="true"
+			        android:text="@string/timer_task_peroid_minute"
+			        android:textSize="@dimen/text_size_larsamll"
+			        android:layout_toRightOf="@+id/image_icon_period_minute"
+			        android:textColor="@color/black" />
+		    	
+		    	<EditText
+		    	    android:id="@+id/tv_select_minute"
+		    	    android:layout_width="wrap_content"
+		    	    android:layout_height="wrap_content"
+		    	    android:layout_centerVertical="true"
+		    	    android:layout_marginLeft="5dp"
+		    	    android:layout_marginRight="5dp"
+		    	    android:layout_toLeftOf="@+id/image_select_minute"
+		    	    android:inputType="number"
+		    	    android:text="@null"
+		    	    android:textColor="#037BFF"
+		    	    android:textSize="@dimen/text_size_norsamll" />
+		    	
+			    <ImageView
+			        android:id="@+id/image_select_minute"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_alignParentRight="true"
+		            android:contentDescription="@null"
+		            android:scaleType="centerCrop"
+		            android:layout_marginRight="@dimen/listitem_user_icon_horizaontal_padding"
+		            android:src="@drawable/smp_more"
+		            android:visibility="invisible" />
+		    </RelativeLayout>
+				
+	    </RelativeLayout>
+
+</RelativeLayout>

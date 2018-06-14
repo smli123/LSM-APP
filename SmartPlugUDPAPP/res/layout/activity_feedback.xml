@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/commom_bg_color" >
+    
+    <include
+          android:id="@+id/commontitlebar"  
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          layout="@layout/view_common_titlebar"/>     
+   
+    <RelativeLayout
+        android:id="@+id/layout_mgr_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:background="@color/commom_bg_color" 
+        android:layout_below="@+id/commontitlebar" 
+        android:layout_marginTop="20dp">
+	    <RelativeLayout
+	        android:id="@+id/layout_items0"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="@dimen/margin_10dip"
+	        android:layout_marginLeft="@dimen/margin_10dip"
+	        android:layout_marginRight="@dimen/margin_10dip"	        
+	        android:background="@color/white"
+	        android:visibility="gone">  
+		    
+			<RelativeLayout
+		        android:id="@+id/lay_mgr_share"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="@dimen/margin_10dip"
+		        android:layout_marginBottom="@dimen/margin_10dip"		        
+		        android:background="@color/white" >
+	
+		        <ImageView
+		            android:id="@+id/img_share_icon"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="10dp"
+		            android:contentDescription="@null"
+		            android:scaleType="centerCrop"
+		            android:src="@drawable/smp_feedback_phone" />
+		        
+	        	<EditText
+	            	android:id="@+id/edt_feedback_phone"
+	        		android:layout_width="match_parent"
+	        		android:layout_height="wrap_content"
+	        		android:layout_toRightOf="@+id/img_share_icon"
+	        		android:layout_marginLeft="5dp"
+	        		android:ems="10"    
+	        		android:textColor="@color/black"
+	        		android:textCursorDrawable="@null"
+	        		android:textSize="@dimen/text_size_larsamll"
+	        		android:background="@null"  
+	        		android:singleLine="true"
+	        		android:layout_centerVertical="true" 
+	        		android:hint="@string/app_feedback_contactmode">
+	        	</EditText> 		        
+
+		    </RelativeLayout>		    
+	    </RelativeLayout>	    
+	
+	    <RelativeLayout
+	        android:id="@+id/layout_items1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/layout_items0"
+	        android:layout_marginLeft="@dimen/margin_10dip"
+	        android:layout_marginRight="@dimen/margin_10dip"
+	        android:layout_marginTop="@dimen/margin_10dip"
+	        android:background="@color/white" >
+		
+
+			
+			<EditText
+            	android:id="@+id/edt_content"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:enabled="true"
+			    android:gravity="top"  
+			    android:inputType="textMultiLine"
+			    android:minLines="8"
+			    android:maxLines="10"
+			    android:padding="5dp" 
+        		android:textColor="@color/black"
+        		android:textCursorDrawable="@null"
+        		android:scrollbars="vertical" 
+			    android:background="@color/white"
+        		android:textSize="@dimen/text_size_larsamll"
+        		android:hint="@string/app_feedback_content">
+        	</EditText>			
+			
+			
+		</RelativeLayout>
+		
+		<Button
+    		android:id="@+id/btn_feedback"
+     		android:layout_width="match_parent"
+     		android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_10dip"
+	        android:layout_marginRight="@dimen/margin_10dip"     		
+     		android:layout_marginTop="20dp" 
+     		android:layout_gravity="center"
+     		android:text="@string/smartplug_commit" 
+     		android:textColor="@color/white"
+     		android:textSize="@dimen/text_size_larsamll"
+     		android:background="@drawable/btn_selector" 
+     		android:layout_centerInParent="true"
+     		android:layout_below="@+id/layout_items1"/>	    	    
+
+    </RelativeLayout>
+</RelativeLayout>

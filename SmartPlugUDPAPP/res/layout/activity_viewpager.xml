@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <include
+          android:id="@+id/commontitlebar"  
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          layout="@layout/view_common_titlebar"/>   
+          
+    <include
+          android:id="@+id/controlbar"  
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          layout="@layout/view_control_bar"
+          android:visibility="gone"/>      
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/carguard_tab_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:background="@color/white"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+	<ImageView
+        android:id="@+id/dialog_marBottom1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/alertdialog_line" 
+        android:contentDescription="@null"/>  
+    
+    <LinearLayout
+        android:id="@+id/layout_bottom_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">    
+
+        <LinearLayout
+            android:id="@+id/layout_tab_plugs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="vertical">            
+            <ImageView
+                android:id="@+id/img_tab_plug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/smp_tab_pluglist_pressed" 
+                android:contentDescription="@null"/>  
+            <TextView
+                android:id="@+id/tv_tab_control"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tabhost_control"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:textSize="12sp" />                   
+        </LinearLayout>
+                
+
+       <LinearLayout
+            android:id="@+id/layout_tab_settings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:orientation="vertical">                 
+            <ImageView
+                android:id="@+id/img_tab_manage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/smp_tab_settings_normal" 
+                android:contentDescription="@null"/>
+            <TextView
+                android:id="@+id/tv_tab_manage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tabhost_manage"
+                android:textColor="@color/lightwhite"
+                android:gravity="center"
+                android:textSize="12sp" />                 
+       </LinearLayout>           
+    </LinearLayout>
+</LinearLayout>

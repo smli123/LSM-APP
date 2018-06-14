@@ -1,0 +1,279 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dailycheckin.MainActivity" >
+
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical">
+	    
+	    <LinearLayout
+		    android:id="@+id/ll_route_tip"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" >
+		
+			<TextView
+			    android:layout_width="100dp"
+			    android:layout_height="wrap_content"
+			    android:textSize="15dp" 
+			    android:text="@string/str_wireless_controller"/>
+			
+			<TextView
+			    android:id="@+id/tv_wifiinfo"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textSize="15dp" 
+			    android:text="@null"/>
+			
+		</LinearLayout>
+	</LinearLayout>    
+
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical">
+	    
+		<LinearLayout
+		    android:id="@+id/ll_allcontroller"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" >
+	    
+		    <RelativeLayout
+		        android:id="@+id/rl_allcontroller"
+		        android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical" >
+				
+				<LinearLayout
+				    android:id="@+id/ll_allpower"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentTop="true"
+				    android:orientation="horizontal" >
+				    
+				    <Button
+				        android:id="@+id/btn_allpoweron"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginTop="20dp"
+				        android:text="@string/str_btn_all_poweron" />
+				    
+				    <Button
+				        android:id="@+id/btn_allpoweroff"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginTop="20dp"
+				        android:text="@string/str_btn_all_poweroff" />
+			    
+			    </LinearLayout>
+	         
+				<LinearLayout
+				    android:id="@+id/ll_light_adjust"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_below="@+id/ll_allpower"
+				    android:orientation="horizontal" >
+				    
+				    <LinearLayout
+				        android:id="@+id/ll_light_adjust_left"
+				        android:layout_width="wrap_content"
+				        android:layout_height="match_parent"
+				        android:gravity="center_vertical"
+				        android:orientation="horizontal" >
+	
+					    <Button
+					        android:id="@+id/btn_light_adjust_cool"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="20dp"
+					        android:text="@string/str_btn_adjust_cool" />
+					    	        
+				    </LinearLayout>    
+				        
+				    <LinearLayout
+					    android:id="@+id/ll_light_adjust_center"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:orientation="vertical" >
+					    
+					    <Button
+					        android:id="@+id/btn_light_adjust_bright"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="20dp"
+					        android:text="@string/str_btn_light_bright" />
+					    
+					    <Button
+					        android:id="@+id/btn_light_adjust_dark"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="20dp"
+					        android:text="@string/str_btn_light_dark" />
+				        
+				    </LinearLayout>    
+				    			    
+				    <LinearLayout
+				        android:id="@+id/ll_light_adjust_right"
+				        android:layout_width="wrap_content"
+				        android:layout_height="match_parent"
+				        android:gravity="center_vertical"
+				        android:orientation="horizontal" >
+					    
+					    <Button
+					        android:id="@+id/btn_light_adjust_warm"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="20dp"
+					        android:text="@string/str_btn_adjust_warm" />
+					    
+				    </LinearLayout>    
+				    
+			    </LinearLayout>
+			    
+			    <RelativeLayout
+			        android:id="@+id/ll_groups_power"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@+id/ll_light_adjust"
+			        android:orientation="horizontal" >
+				    
+				    <LinearLayout
+				        android:id="@+id/ll_group1_power"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentLeft="true"
+				        android:orientation="vertical" >
+					    
+				        <TextView
+				            android:id="@+id/tv_group1_name"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:layout_gravity="center_horizontal"
+				            android:layout_marginTop="20dp"
+				            android:text="@string/str_btn_group_1" />
+				        
+					    <Button
+					        android:id="@+id/btn_group1_poweron"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="20dp"
+					        android:text="@string/str_btn_group_poweron" />
+					    
+					    <Button
+					        android:id="@+id/btn_group1_poweroff"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="20dp"
+					        android:text="@string/str_btn_group_poweroff" />
+					    
+				    </LinearLayout>  
+				    
+				    <LinearLayout
+				        android:id="@+id/ll_group2_power"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_toRightOf="@+id/ll_group1_power"
+				        android:orientation="vertical" >
+					    
+				        <TextView
+				            android:id="@+id/tv_group2_name"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:layout_gravity="center_horizontal"
+				            android:layout_marginTop="20dp"
+				            android:text="@string/str_btn_group_2" />
+				        
+					    <Button
+					        android:id="@+id/btn_group2_poweron"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="20dp"
+					        android:text="@string/str_btn_group_poweron" />
+					    
+					    <Button
+					        android:id="@+id/btn_group2_poweroff"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="20dp"
+					        android:text="@string/str_btn_group_poweroff" />
+					    
+				    </LinearLayout>   
+				    
+				    <LinearLayout
+				        android:id="@+id/ll_group3_power"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_toRightOf="@+id/ll_group2_power"
+				        android:orientation="vertical" >
+					    
+				        <TextView
+				            android:id="@+id/tv_group3_name"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:layout_gravity="center_horizontal"
+				            android:layout_marginTop="20dp"
+				            android:text="@string/str_btn_group_3" />
+				        
+					    <Button
+					        android:id="@+id/btn_group3_poweron"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="20dp"
+					        android:text="@string/str_btn_group_poweron" />
+					    
+					    <Button
+					        android:id="@+id/btn_group3_poweroff"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="20dp"
+					        android:text="@string/str_btn_group_poweroff" />
+					    
+				    </LinearLayout>  
+				    
+				    <LinearLayout
+				        android:id="@+id/ll_group4_power"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_toRightOf="@+id/ll_group3_power"
+				        android:orientation="vertical" >
+					    
+				        <TextView
+				            android:id="@+id/tv_group4_name"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:layout_gravity="center_horizontal"
+				            android:layout_marginTop="20dp"
+				            android:text="@string/str_btn_group_4" />
+				        
+					    <Button
+					        android:id="@+id/btn_group4_poweron"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="20dp"
+					        android:text="@string/str_btn_group_poweron" />
+					    
+					    <Button
+					        android:id="@+id/btn_group4_poweroff"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_marginTop="20dp"
+					        android:text="@string/str_btn_group_poweroff" />
+					    
+				    </LinearLayout>  
+				    
+			    </RelativeLayout>
+				
+		    </RelativeLayout>
+	
+		</LinearLayout>
+	
+	</LinearLayout>    
+</RelativeLayout>

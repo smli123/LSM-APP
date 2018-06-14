@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/remotecontrol_frament"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/commom_bg_color">
+    
+    <include
+          android:id="@+id/commontitlebar"  
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          layout="@layout/view_common_titlebar"/>     
+    
+    <ListView
+          android:id="@+id/plug_list"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:divider="@drawable/list_item_diliver_left10_right0"
+          android:layout_below="@+id/commontitlebar"
+          android:dividerHeight="1px">
+    </ListView>    
+    
+</RelativeLayout>

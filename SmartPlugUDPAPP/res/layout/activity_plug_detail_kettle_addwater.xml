@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/commom_bg_color"
+    android:orientation="vertical">
+    
+    <include
+          android:id="@+id/commontitlebar"  
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          layout="@layout/view_common_titlebar"
+          android:layout_alignParentTop="true"/>   
+
+    <RelativeLayout
+        android:id="@+id/rl_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commontitlebar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp" 
+        android:orientation="horizontal" >
+        
+	    <Button
+		    android:id="@+id/btn_add_water"
+		    android:layout_width="60dp"
+		    android:layout_height="wrap_content"
+	        android:layout_marginLeft="20dp"
+		    android:layout_alignParentLeft="true"
+		    android:background="@drawable/btn_selector"
+		    android:text="加水"
+		    android:textColor="@color/white"
+		    android:textSize="@dimen/text_size_larsamll" />
+        
+	    <Button
+	        android:id="@+id/btn_add_water_3"
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="false"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginRight="0dp"
+	        android:background="@drawable/btn_selector"
+	        android:text="加水3秒"
+	        android:textColor="@color/white"
+	        android:textSize="@dimen/text_size_larsamll" />
+	    
+          <Button
+		    android:id="@+id/btn_stop_water"
+		    android:layout_width="60dp"
+		    android:layout_height="wrap_content"
+		    android:layout_marginRight="20dp"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignParentLeft="false"
+		    android:background="@drawable/btn_selector"
+		    android:text="停止"
+		    android:textColor="@color/white"
+		    android:textSize="@dimen/text_size_larsamll" />
+        
+     </RelativeLayout>        
+</RelativeLayout>    

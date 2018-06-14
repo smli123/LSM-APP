@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="255"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/commontitlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/view_common_titlebar" />
+
+    <ImageView
+        android:id="@+id/edit_car_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/smp_plug_big" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:text="@string/add_plug_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_norsamll" />
+        
+        <RelativeLayout 
+            android:id="@+id/layout_plugname"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="4">          
+
+	        <EditText
+	            android:id="@+id/edit_plug_name"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_marginLeft="2dp"
+	            android:background="@null"
+	            android:ems="10"
+	            android:hint="@string/add_plug_name"
+	            android:maxLength="20"
+	            android:singleLine="true"
+	            android:textColor="@color/black"
+	            android:textCursorDrawable="@null"
+	            android:textSize="@dimen/text_size_norsamll" />
+	
+	        <ImageView
+	            android:id="@+id/image_delplugname"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_gravity="center"
+	            android:contentDescription="@null"
+	            android:src="@drawable/smp_input_delete"
+	            android:visibility="visible" />
+	    </RelativeLayout>
+    </LinearLayout> 
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"        
+        android:background="@color/alertdialog_line"/>     
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:text="@string/add_plug_mac"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_norsamll" />
+
+        <EditText
+            android:id="@+id/plug_mac"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="4"
+            android:background="@null"
+            android:ems="10"
+            android:enabled="false"
+            android:maxLength="20"
+            android:hint="@null"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_norsamll" />
+      
+    </LinearLayout>
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"        
+        android:background="@color/alertdialog_line"/>   
+            
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:text="@string/str_wifi"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_norsamll" />
+
+           
+        <RelativeLayout 
+            android:id="@+id/layout_router"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp">    
+	        <TextView
+	            android:id="@+id/spinnerWiFiSSID"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:gravity="center_vertical"
+	            android:background="@null"
+	            android:ems="10"
+	            android:hint="@string/str_wifi"
+	            android:maxLength="20"
+	            android:singleLine="true"
+	            android:textColor="@color/black"
+	            android:textCursorDrawable="@null"
+	            android:inputType=""
+	            android:textSize="@dimen/text_size_norsamll" />	                   
+	        
+	        <ImageView
+	            android:id="@+id/image_morerouter"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_gravity="center"
+	            android:contentDescription="@null"
+	            android:src="@drawable/smp_dropdown"
+	            android:visibility="visible" />  
+            
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!--  
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"        
+        android:background="@color/alertdialog_line"/> 
+ 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:text="@string/str_wifi_mode"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_norsamll" />
+           
+        <RelativeLayout 
+            android:id="@+id/layout_routermode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp">    
+	        <TextView
+	            android:id="@+id/txtRouterMode"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:gravity="center_vertical"
+	            android:background="@null"
+	            android:ems="10"
+	            android:hint="@string/str_wifi_mode"
+	            android:maxLength="20"
+	            android:singleLine="true"
+	            android:textColor="@color/black"
+	            android:textCursorDrawable="@null"
+	            android:inputType=""
+	            android:textSize="@dimen/text_size_norsamll" />	                   
+	        
+	        <ImageView
+	            android:id="@+id/image_moreroutermode"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:layout_gravity="center"
+	            android:contentDescription="@null"
+	            android:src="@drawable/smp_dropdown"
+	            android:visibility="visible" />  
+            
+        </RelativeLayout>
+
+    </LinearLayout>
+     -->
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"        
+        android:background="@color/alertdialog_line"/>     
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:text="@string/str_wifi_pwd"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_norsamll" />
+
+        <EditText
+            android:id="@+id/edit_wifi_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="@string/register_pwd"
+            android:inputType="textPassword"
+            android:maxLength="30"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_norsamll" />
+
+    </LinearLayout>
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"        
+        android:background="@color/alertdialog_line"/>       
+        
+    <LinearLayout
+        android:id="@+id/layout_socket3_keeppwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"        
+        android:layout_marginTop="10dp">        
+  		<com.thingzdo.util.ThingzdoCheckBox 
+	      	android:id="@+id/chkViewPwd" 
+	      	android:layout_width="27dp"
+	      	android:layout_height="27dp"/> 
+		<TextView
+	        android:id="@+id/login_keeppwd"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"         
+	        android:text="@string/str_passwd_visible"
+	        android:textColor="@color/black"
+	        android:layout_marginLeft="5dp"
+	        android:layout_gravity="center"
+	        android:textSize="@dimen/text_size_norsamll" />	        	 
+    </LinearLayout>  
+    
+	<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"        
+        android:background="@color/alertdialog_line"/>    
+    
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.thingzdo.util.ThingzdoCheckBox 
+	      	android:id="@+id/chkClearTimer" 
+	      	android:layout_width="27dp"
+	      	android:layout_height="27dp"/>
+        
+		<TextView
+	        android:id="@+id/txtClearTimer"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"         
+	        android:text="@string/str_cleartimer"
+	        android:textColor="@color/black"
+	        android:layout_marginLeft="5dp"
+	        android:layout_gravity="center"
+	        android:textSize="@dimen/text_size_norsamll" />        
+
+    </LinearLayout>
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"        
+        android:background="@color/alertdialog_line"
+        android:visibility="gone"/>     
+        
+    <LinearLayout
+        android:id="@+id/layout_ProtocolMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"        
+        android:layout_marginTop="10dp"
+        android:visibility="gone">     
+        
+        <com.thingzdo.util.ThingzdoCheckBox 
+	      	android:id="@+id/chkProtocolMode"
+	      	android:layout_width="27dp"
+	      	android:layout_height="27dp"/>
+        
+		<TextView
+	        android:id="@+id/txtProtocolMode"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/protocol_tcp"
+	        android:textColor="@color/black"
+	        android:layout_marginLeft="5dp"
+	        android:layout_gravity="center"
+	        android:textSize="@dimen/text_size_norsamll" />       
+    </LinearLayout>   
+		
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_selector"
+        android:text="@string/add"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"        
+        android:textSize="@dimen/text_size_larsamll" />
+
+</LinearLayout>

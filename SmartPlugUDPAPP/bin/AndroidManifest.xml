@@ -1,0 +1,402 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thingzdo.smartplug_udp"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="V1.2.0B0117" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+	<supports-screens android:largeScreens="true"  
+            android:normalScreens="true"  
+            android:smallScreens="true"  
+            android:resizeable="true"  
+            android:anyDensity="true" 
+            android:xlargeScreens="true"/>
+	
+	<!-- 使用地图需要的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />    
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> 
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    
+    <!-- 摇一摇的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <!-- 使用地图需要的权限 -->
+	<!--使用网络功能所需权限  -->  
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />  
+	<uses-permission android:name="android.permission.INTERNET" />  
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />  
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />  
+	<!-- SDK离线地图和cache功能需要读写外部存储器 -->  
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />  
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" /> 
+	<!-- 获取设置信息和详情页直接拨打电话需要以下权限  -->  
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />  
+	<uses-permission android:name="android.permission.CALL_PHONE" /> 
+	
+	<uses-permission android:name="android.permission.RESTART_PACKAGES" />
+	<uses-permission android:name="android.permission.GET_TASKS" />	 
+	
+	<uses-permission android:name="android.permission.CAMERA"/>
+	<uses-feature android:name="android.hardware.camera" />
+	<uses-feature android:name="android.hardware.camera.autofocus" />
+	
+	<!-- GPS 测车速 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    
+    <!-- android开机自动启动 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- android 开机自动启动 -->
+    
+    <application
+        android:allowBackup="true"
+        android:persistent="true"
+        android:icon="@drawable/smp_icon"
+        android:label="@string/app_name" 
+        android:name="com.thingzdo.ui.smartplug.SmartPlugApplication">
+        
+        <meta-data android:name="com.baidu.lbsapi.API_KEY"
+            android:value="rpyayssS62RTcfhpdQ9rNGAUSk0Otlx7"/>
+        
+        <!-- meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="TdqzDwvx5SEvGnbcAkSedG9d" /> -->
+        <meta-data android:value="55549ee9e0f55a6607000853" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="Wandoujia" android:name="UMENG_CHANNEL"/>
+		
+        <service
+	        android:name="com.umeng.update.net.DownloadingService"
+	        android:process=":DownloadingService" >
+		</service>
+
+        <!-- android 开机自动启动 -->		
+		<receiver android:name=".StartUpReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+		<!-- android 开机自动启动 -->
+		
+		<receiver android:name="com.thingzdo.ui.smartplug.ShutdownReceiver">    
+            <intent-filter>    
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>    
+            </intent-filter>    
+        </receiver>		
+		
+        <provider android:name="com.thingzdo.dataprovider.SmartPlugActionProvider" 
+            android:authorities="com.thingzdo.smartplugctrlactionprovider" /> 
+              
+        
+        <provider android:name="com.thingzdo.dataprovider.SmartPlugUserProvider" 
+            android:authorities="com.thingzdo.smartpluguserprovider">
+        </provider>         
+        
+        <provider android:name="com.thingzdo.dataprovider.SmartPlugProvider" 
+            android:authorities="com.thingzdo.smartplugcontentprovider">
+        </provider> 
+        
+        <provider android:name="com.thingzdo.dataprovider.SmartPlugTimerProvider" 
+            android:authorities="com.thingzdo.smartplugtimerprovider">
+        </provider>
+        
+        <provider android:name="com.thingzdo.dataprovider.SmartPlugIRSceneProvider" 
+            android:authorities="com.thingzdo.smartplugirsceneprovider">
+        </provider>
+        
+   
+        <activity
+            android:name="com.thingzdo.ui.WelcomeActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:screenOrientation="portrait"
+            android:launchMode="standard"
+            android:configChanges="keyboardHidden|orientation|screenLayout">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>            
+        </activity>     
+        
+        <activity
+            android:name="com.thingzdo.ui.login.LoginActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:screenOrientation="portrait"  
+            android:launchMode="singleTask"
+            android:label="@string/app_name">         
+        </activity>
+        <activity
+            android:name="com.thingzdo.ui.shakeshake.ShakeShake"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">           
+        </activity>
+        <activity
+            android:name="com.thingzdo.ui.smartplug.SmartPlugActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:label="@string/app_name" >
+        </activity>  
+        <activity
+            android:name="com.thingzdo.ui.login.RegisterActivity"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:screenOrientation="portrait">
+        </activity>
+                     
+       
+		<activity
+            android:name="com.thingzdo.tool.camera.CameraDemoActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden">
+        </activity>    
+		<activity
+            android:name="com.thingzdo.ui.login.FindPwdActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden">
+        </activity> 
+		<activity
+            android:name="com.thingzdo.ui.manage.AddOneSocket"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden">
+        </activity> 
+        <activity
+            android:name="com.thingzdo.ui.manage.AddSocketActivity2"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+        </activity> 
+        <activity
+            android:name="com.thingzdo.ui.manage.AddSocketActivity3"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+        </activity> 
+        <activity
+            android:name="com.thingzdo.ui.manage.AboutUsActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+        </activity> 
+        <activity
+            android:name="com.thingzdo.ui.manage.AboutUs_v2Activity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+        </activity> 
+        <activity
+            android:name="com.thingzdo.ui.manage.IatDemo"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+        </activity> 
+        <activity
+            android:name="com.thingzdo.ui.manage.DuerOSActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+        </activity> 
+        <activity
+            android:name="com.thingzdo.ui.manage.ParameterConfigActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+        </activity> 
+        
+        <activity
+            android:name="com.thingzdo.ui.manage.ModifyPasswdActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+        </activity> 
+        <activity
+            android:name="com.thingzdo.ui.manage.ModifyEmailActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+        </activity> 
+        <activity
+            android:name="com.thingzdo.ui.manage.ModifyServerIPActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
+        </activity> 
+        <activity
+            android:name="com.thingzdo.ui.control.PlugDetailActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity> 
+        <activity
+            android:name="com.thingzdo.ui.control.PlugDetailInfoActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity> 
+        <activity
+            android:name="com.thingzdo.ui.control.PlugTimerActivity"
+            android:label="@string/app_name" 
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:screenOrientation="portrait">
+        </activity> 
+        
+		<activity 
+		    android:name="com.umeng.update.UpdateDialogActivity"
+		    android:theme="@android:style/Theme.Holo.NoActionBar">
+		</activity>	
+		<activity 
+		    android:name="com.thingzdo.ui.control.LightColorSettingActivity"
+		    android:screenOrientation="portrait"
+		    android:theme="@android:style/Theme.Holo.NoActionBar">
+		</activity>		
+		<activity 
+		    android:name="com.thingzdo.smartplug.ui.share.SelectSharePeopleWizardActivity"
+		    android:theme="@android:style/Theme.Holo.NoActionBar">
+		</activity>	
+		<activity 
+		    android:name="com.thingzdo.smartplug.ui.share.SelectSharePlugWizardActivity"
+		    android:theme="@android:style/Theme.Holo.NoActionBar">
+		</activity>		
+		<activity 
+		    android:name="com.thingzdo.ui.manage.AccountSecurityActivity"
+		    android:theme="@android:style/Theme.Holo.NoActionBar"
+		    android:screenOrientation="portrait">
+		</activity>	
+		<activity 
+		    android:name="com.thingzdo.ui.manage.FeedbackActivity"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:theme="@android:style/Theme.Holo.NoActionBar"		    
+		    android:screenOrientation="portrait">
+		</activity>	
+		<activity 
+		    android:name="com.thingzdo.ui.manage.HelpActivity"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:theme="@android:style/Theme.Holo.NoActionBar"		    
+		    android:screenOrientation="portrait">
+		</activity>	
+		<activity 
+		    android:name="com.thingzdo.ui.control.WifiPlugActivity"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:theme="@android:style/Theme.Holo.NoActionBar"		    
+		    android:screenOrientation="portrait">
+		</activity>	
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.SetPeriodActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.InterConnect"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.DetailCurtainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.DetailWindowActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.DetailAirConActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.DetailAirCon2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.DetailIRSceneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.EnergeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.DetailBatteryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.DetailBattery2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.DetailKettleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+		
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.DetailKettleAddWaterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+		
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.DetailPCCtrlActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+		</activity>
+		
+		<activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.thingzdo.ui.control.DetailTVActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+		</activity>
+				
+    </application>
+
+</manifest>
+

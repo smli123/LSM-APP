@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/commom_bg_color"
+    android:orientation="vertical" >
+    
+    <include
+          android:id="@+id/commontitlebar"  
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          layout="@layout/view_common_titlebar"
+          android:layout_alignParentTop="true" />   
+
+    <RelativeLayout
+        android:id="@+id/rl_select_no_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commontitlebar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+   		<ImageView
+           android:id="@+id/iv_aircon_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="7dp"
+           android:layout_centerVertical="true"
+           android:background="@drawable/smp_aircon_name" />
+   		
+          <TextView
+              android:id="@+id/tv_aircon_select_content"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:text="电视名字"
+              android:textColor="@color/black"
+              android:textSize="15sp" 
+              android:layout_toRightOf="@id/iv_aircon_name" 
+              android:visibility="gone"/>
+          
+          <Spinner
+              android:id="@+id/spinner_ir"
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"/>
+          
+          <Button
+              android:id="@+id/btn_autosearch"
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:background="@drawable/btn_selector"
+              android:text="开始搜索"
+              android:textColor="@color/white"
+              android:textSize="@dimen/text_size_larsamll" 
+              android:visibility="gone"/>
+		          
+    </RelativeLayout>
+    
+    <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+      	  android:background="@color/white"
+    	  android:layout_below="@id/rl_select_no_tip"
+      	  android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+          android:orientation="vertical" >
+
+	    <RelativeLayout
+	        android:id="@+id/rl_top"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+      	  	android:layout_marginTop="10dp"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:background="@color/white"
+	    	android:orientation="vertical">
+	    	
+	        <ImageView
+	            android:id="@+id/iv_tv_power"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:background="@drawable/smp_timer_enable" />
+	        <ImageView
+	            android:id="@+id/iv_mute"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+	            android:background="@drawable/smp_timer_enable" />
+		        
+	        <ImageView
+	            android:id="@+id/iv_power"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:background="@drawable/smp_timer_enable" />
+		        
+	    </RelativeLayout>
+
+	    
+	    <RelativeLayout
+	        android:id="@+id/rl_center"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+      	  	android:layout_marginTop="10dp"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:background="@color/white"
+    	 	android:layout_below="@id/rl_top"
+	    	android:orientation="horizontal">
+	    	
+	    	<RelativeLayout
+		        android:id="@+id/rl_center_left"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+	      	  	android:layout_marginTop="10dp"
+	        	android:layout_marginLeft="0dp"
+	        	android:layout_marginRight="0dp"
+	        	android:background="@color/white"
+	            android:layout_alignParentLeft="true"
+		    	android:orientation="vertical">
+		    	
+		        <ImageView
+		            android:id="@+id/iv_volume_add"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/smp_timer_enable" />
+		        <ImageView
+		            android:id="@+id/iv_volume_reduce"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+    	 			android:layout_below="@id/iv_volume_add"
+		            android:background="@drawable/smp_timer_enable" />
+		     </RelativeLayout>
+		     
+	    	<RelativeLayout
+		        android:id="@+id/rl_center_right"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+	      	  	android:layout_marginTop="10dp"
+	        	android:layout_marginLeft="0dp"
+	        	android:layout_marginRight="0dp"
+	        	android:background="@color/white"
+	            android:layout_alignParentRight="true"
+		    	android:orientation="vertical">
+		    	
+		        <ImageView
+		            android:id="@+id/iv_channel_add"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/smp_timer_enable" />
+		        <ImageView
+		            android:id="@+id/iv_channel_reduce"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+    	 			android:layout_below="@id/iv_channel_add"
+		            android:background="@drawable/smp_timer_enable" />
+		     </RelativeLayout>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout
+	        android:id="@+id/rl_bottom"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+      	  	android:layout_marginTop="10dp"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:background="@color/white"
+    	  	android:layout_below="@id/rl_center"
+	    	android:orientation="vertical">
+	    	
+	        <RelativeLayout
+		        android:id="@+id/rl_bottom_1"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+	      	  	android:layout_marginTop="10dp"
+	        	android:layout_marginLeft="0dp"
+	        	android:layout_marginRight="0dp"
+	        	android:background="@color/white"
+		    	android:orientation="vertical">
+		        
+		        <ImageView
+		            android:id="@+id/iv_number_1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+	            	android:layout_alignParentLeft="true"
+		            android:background="@drawable/smp_timer_enable" />
+
+		        <ImageView
+		            android:id="@+id/iv_number_2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:background="@drawable/smp_timer_enable" />
+
+		        <ImageView
+		            android:id="@+id/iv_number_3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+	            	android:layout_alignParentRight="true"
+		            android:background="@drawable/smp_timer_enable" />
+	            
+	        </RelativeLayout>
+	        
+	        <RelativeLayout
+		        android:id="@+id/rl_bottom_2"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+	      	  	android:layout_marginTop="10dp"
+	        	android:layout_marginLeft="0dp"
+	        	android:layout_marginRight="0dp"
+	        	android:background="@color/white"
+    	  		android:layout_below="@id/rl_bottom_1"
+		    	android:orientation="vertical">
+		        
+		        <ImageView
+		            android:id="@+id/iv_number_4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+	            	android:layout_alignParentLeft="true"
+		            android:background="@drawable/smp_timer_enable" />
+
+		        <ImageView
+		            android:id="@+id/iv_number_5"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:background="@drawable/smp_timer_enable" />
+
+		        <ImageView
+		            android:id="@+id/iv_number_6"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+	            	android:layout_alignParentRight="true"
+		            android:background="@drawable/smp_timer_enable" />
+	            
+	        </RelativeLayout>
+	        
+	        <RelativeLayout
+		        android:id="@+id/rl_bottom_3"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+	      	  	android:layout_marginTop="10dp"
+	        	android:layout_marginLeft="0dp"
+	        	android:layout_marginRight="0dp"
+	        	android:background="@color/white"
+    	  		android:layout_below="@id/rl_bottom_2"
+		    	android:orientation="vertical">
+		        
+		        <ImageView
+		            android:id="@+id/iv_number_7"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+	            	android:layout_alignParentLeft="true"
+		            android:background="@drawable/smp_timer_enable" />
+
+		        <ImageView
+		            android:id="@+id/iv_number_8"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:background="@drawable/smp_timer_enable" />
+
+		        <ImageView
+		            android:id="@+id/iv_number_9"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+	            	android:layout_alignParentRight="true"
+		            android:background="@drawable/smp_timer_enable" />
+	            
+	        </RelativeLayout>
+	        
+	        <RelativeLayout
+		        android:id="@+id/rl_bottom_4"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+	      	  	android:layout_marginTop="10dp"
+	        	android:layout_marginLeft="0dp"
+	        	android:layout_marginRight="0dp"
+	        	android:background="@color/white"
+    	  		android:layout_below="@id/rl_bottom_3"
+		    	android:orientation="vertical">
+		        
+		        <ImageView
+		            android:id="@+id/iv_number_cancel"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+	            	android:layout_alignParentLeft="true"
+		            android:background="@drawable/smp_timer_enable" />
+
+		        <ImageView
+		            android:id="@+id/iv_number_0"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:background="@drawable/smp_timer_enable" />
+
+		        <ImageView
+		            android:id="@+id/iv_number_ok"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+	            	android:layout_alignParentRight="true"
+		            android:background="@drawable/smp_timer_enable" />
+	            
+	        </RelativeLayout>
+	    </RelativeLayout>
+	    
+	</RelativeLayout>
+</RelativeLayout>

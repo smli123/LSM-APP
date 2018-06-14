@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/commontitlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/view_common_titlebar" />
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"	    
+	    android:orientation="vertical">
+
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginTop="5dp"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal" 
+	        android:visibility="gone">
+	        
+		    <ImageView
+		        android:id="@+id/img_oldmail"
+	           	android:layout_width="wrap_content"
+	           	android:layout_height="wrap_content"
+	           	android:src="@drawable/login_email"
+	           	android:contentDescription="@null"
+	           	android:layout_centerVertical="true"
+	           	android:layout_marginLeft="2dp"/>        
+	
+	        <EditText
+	            android:id="@+id/edit_old_email"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+        		android:layout_toLeftOf="@+id/image_deloldemail"
+        		android:layout_toRightOf="@+id/img_oldmail"	            
+	            android:background="@null"
+	            android:ems="10"
+	            android:hint="@string/str_old_email"
+	            android:inputType="textEmailAddress"
+	            android:maxLength="30"
+	            android:singleLine="true"
+	            android:textColor="@color/black"
+	            android:textCursorDrawable="@null"
+	            android:textSize="@dimen/text_size_larsamll" />
+	        
+			<ImageView
+	           	android:id="@+id/image_deloldemail" 
+	   		    android:layout_width="wrap_content"
+	       		android:layout_height="wrap_content"
+	           	android:src="@drawable/login_delete"
+	           	android:contentDescription="@null"
+	           	android:layout_centerVertical="true"
+	           	android:layout_alignParentRight="true"
+	           	android:visibility="visible"
+	           	android:layout_marginRight="2dp"
+	           	/>        
+	
+	    </RelativeLayout>
+	    
+	    <ImageView
+	        android:layout_width="match_parent"
+	        android:layout_height="0.5dp"
+	        android:layout_marginTop="5dp"
+	        android:background="@color/alertdialog_line"
+	        android:visibility="gone"/>      
+	
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginTop="10dp">
+	
+		    <ImageView
+		        android:id="@+id/img_newmail"
+            	android:layout_width="32dp"
+            	android:layout_height="32dp"
+	           	android:src="@drawable/smp_email"
+	           	android:contentDescription="@null"
+	           	android:layout_alignParentLeft="true"
+	           	android:layout_centerVertical="true"
+	           	android:layout_marginLeft="2dp"/>        
+	
+	
+	        <EditText
+	            android:id="@+id/edit_new_email"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+        		android:layout_toLeftOf="@+id/image_delnewemail"
+        		android:layout_toRightOf="@+id/img_newmail"	
+	            android:background="@null"
+	            android:ems="10"
+	            android:hint="@string/str_new_email"
+	            android:inputType="textEmailAddress"
+	            android:maxLength="30"
+	            android:singleLine="true"
+	            android:textColor="@color/black"
+	            android:textCursorDrawable="@null"
+	            android:layout_centerVertical="true"
+	            android:textSize="@dimen/text_size_larsamll" />
+	        
+			<ImageView
+	           	android:id="@+id/image_delnewemail" 
+	   		    android:layout_width="wrap_content"
+	       		android:layout_height="wrap_content"
+	           	android:src="@drawable/smp_input_delete"
+	           	android:contentDescription="@null"
+	           	android:layout_alignParentRight="true"
+	           	android:layout_centerVertical="true"
+	           	android:layout_marginRight="2dp" 
+	           	android:visibility="visible"/>        
+	
+	    </RelativeLayout>
+	    
+	    <ImageView
+	        android:layout_width="match_parent"
+	        android:layout_height="0.5dp"
+	        android:layout_marginTop="5dp"
+	        android:background="@color/alertdialog_line"/>     
+	
+	    <Button
+	        android:id="@+id/btn_finish"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout_marginTop="15dp"
+	        android:background="@drawable/btn_selector"
+	        android:text="@string/smartplug_ok"
+	        android:textColor="@color/white"    
+	        android:textSize="@dimen/text_size_larsamll" />
+	</LinearLayout>
+</LinearLayout>    

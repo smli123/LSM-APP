@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/commom_bg_color">
+    
+    <include
+          android:id="@+id/commontitlebar"  
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          layout="@layout/view_common_titlebar"
+          android:layout_alignParentTop="true"/>   
+          
+    <RelativeLayout
+        android:id="@+id/rl_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commontitlebar"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"	         
+        android:background="@color/commom_bg_color"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        
+	    <LinearLayout
+	        android:id="@+id/ll_tip"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical">
+
+		    <LinearLayout
+			    android:id="@+id/ll_pc_tip"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical" >
+
+				<TextView
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:textSize="15sp"
+				    android:text="可管理的电脑"
+				    android:textColor="@color/black"/>
+				
+				<ListView
+				    android:id="@+id/lv_pc_macs"
+				    android:layout_width="match_parent"
+				    android:layout_height="200dp"
+				    android:textSize="15sp" 
+				    android:textColor="@color/black"/>
+				
+			</LinearLayout>
+		</LinearLayout>
+	    
+	    <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/ll_tip"
+		    android:orientation="vertical" >
+
+	        <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="10dp"
+	            android:layout_marginLeft="10dp"
+	            android:layout_marginRight="10dp"
+	            android:layout_marginTop="10dp"
+	            android:orientation="horizontal" >
+
+	            <Button
+	                android:id="@+id/btn_pc_ctrl_open"
+	                android:layout_width="100dp"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:background="@drawable/btn_selector"
+	                android:text="远程开机"
+	                android:textColor="@color/white"
+	                android:textSize="@dimen/text_size_larsamll" />
+			
+	            <Button
+	                android:id="@+id/btn_pc_ctrl_close"
+	                android:layout_width="100dp"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:background="@drawable/btn_selector"
+	                android:text="远程关机"
+	                android:textColor="@color/white"
+	                android:textSize="@dimen/text_size_larsamll" />
+			
+		    </RelativeLayout>
+		    
+	    </LinearLayout>
+	    
+	</RelativeLayout>
+</RelativeLayout>

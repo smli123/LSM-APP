@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    
+    <LinearLayout
+        android:id="@+id/rlPlugCtrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+        
+        <LinearLayout	        
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="vertical"
+	        android:gravity="center">
+
+	       	<TextView
+	       	    android:id="@+id/imgUsbCtrl"
+	       	    android:layout_width="wrap_content"
+	       	    android:layout_height="wrap_content"
+	       	    android:background="@null"
+	       	    android:text="@string/usb"
+	       	    android:drawableTop="@drawable/smp_usb_on_big"
+	       	    android:gravity="center"
+	       	    android:textColor="@color/black"
+	       	    android:textSize="@dimen/text_size_midsamll"/>			               	
+            
+        </LinearLayout>        
+        
+        <LinearLayout	        
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="vertical"
+	        android:gravity="center"
+	        android:visibility="visible">
+
+	       	<TextView
+	       	    android:id="@+id/imgLockCtrl"
+	       	    android:layout_width="wrap_content"
+	       	    android:layout_height="wrap_content"
+	       	    android:background="@null"
+	       	    android:text="@string/smartplug_ctrl_lock"
+	       	    android:gravity="center"
+	       	    android:drawableTop="@drawable/smp_parentctrl_active_big"
+	       	    android:textColor="@color/black"
+	       	    android:textSize="@dimen/text_size_midsamll"/>			               	
+            
+        </LinearLayout>
+        
+<!--         <LinearLayout
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"  
+	        android:orientation="vertical" 
+	        android:gravity="center">
+	       	<TextView
+	       	    android:id="@+id/imgNullCtrl"
+	       	    android:layout_width="wrap_content"
+	       	    android:layout_height="wrap_content"
+	       	    android:background="@null"
+	       	    android:text="@string/smartplug_ctrl_bell"
+	       	    android:gravity="center"
+	       	    android:drawableTop="@drawable/bell_128"
+	       	    android:textColor="@color/black"
+	       	    android:textSize="@dimen/text_size_midsamll"
+	       	    android:visibility="invisible"/>			              	
+            
+        </LinearLayout>  -->       
+        
+    </LinearLayout>
+</RelativeLayout>    

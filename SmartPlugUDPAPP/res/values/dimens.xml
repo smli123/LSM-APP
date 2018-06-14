@@ -1,0 +1,74 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <dimen name="grid_item_horizontal_margin">23px</dimen>
+    <dimen name="grid_item_vertical_margin">9dp</dimen>    
+	
+    <!-- gotalauncher -->
+    <dimen   name="gotalaunch_margin_toppading">8dip</dimen>
+    <dimen   name="gotalaunch_margin_padding">14dip</dimen>
+    <dimen   name="gotalaunch_switch_padding">17dip</dimen>
+    <dimen   name="gotalaunch_slight_padding">5dip</dimen>
+    <dimen   name="gotalaunch_layout_padding">20dip</dimen>
+    <dimen   name="gotalaunch_layout_width">80dip</dimen>
+    <dimen   name="gotalaunch_layout_height">80dip</dimen>
+  
+    
+	<!-- dialpad -->
+	<integer name="dialpad_layout_weight_dialpad">65</integer>   
+    <dimen   name="dialpad_vertical_margin">2dip</dimen>
+    <dimen   name="dialpad_horizontal_margin">0dip</dimen>
+    <integer name="dialpad_layout_weight_digits">23</integer>
+    <dimen   name="dialpad_digits_text_size">35sp</dimen>	
+    
+    <!-- 文本大小定义 -->
+    <dimen name="text_size_xsamll">8sp</dimen>
+    <dimen name="text_size_samll">12sp</dimen>	
+    <dimen name="text_size_normal">15sp</dimen>
+    <dimen name="text_size_midnormal">18sp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="text_size_large">25sp</dimen>
+    <dimen name="text_size_xllarge">30sp</dimen>
+    <dimen name="text_size_xlarge">35sp</dimen> 
+    <dimen name="text_size_xxlarge">90sp</dimen>    
+    
+    <!-- list姓名的字号大小 -->
+    <dimen name="listitem_name_text_size">21sp</dimen>
+    <!-- list号码的字号大小 -->
+    <dimen name="listitem_phone_text_size">18sp</dimen>
+    <!-- list其他信息的字号大小 -->
+    <dimen name="listitem_extra_text_size">12sp</dimen> 
+    <!-- list图标大小 -->   
+    <dimen name="listitem_user_icon_size">44dp</dimen>
+    <!-- list图标水平边距 -->
+    <dimen name="listitem_user_icon_horizaontal_padding">12dp</dimen>
+    <!-- list图标垂直边距 -->
+    <dimen name="listitem_user_icon_vertial_padding">8dp</dimen>
+    <!-- list文本水平和垂直边距 -->
+    <dimen name="listitem_text_vertical_margin">2dip</dimen>
+    <dimen name="listitem_text_horizontal_margin">2dip</dimen> 
+    
+    <!-- 用户大图标尺寸 -->
+    <dimen name="user_icon_size_large">64dp</dimen>
+    
+    <dimen name="margin_10dip">10dp</dimen>
+    <dimen name="margin_5dip">5dp</dimen>
+    
+    <dimen name="margin_scene">5dp</dimen>
+       
+    <!-- 文本大小  设计公司参考部分，上部分的设置将取消 -->
+    <dimen name="text_size_minisamll">12sp</dimen>
+    <dimen name="text_size_midsamll">15sp</dimen>	
+    <dimen name="text_size_norsamll">16sp</dimen>
+    <dimen name="text_size_larsamll">18sp</dimen>
+    <dimen name="text_size_minimedium">20sp</dimen>
+    <dimen name="text_size_mdimedium">23sp</dimen>
+    <dimen name="text_size_normedium">24sp</dimen>
+    <dimen name="text_size_largemedium">26sp</dimen> 
+    <dimen name="text_size_xlargemedium">27sp</dimen>
+    <dimen name="text_size_norlarge">33sp</dimen> 
+    <dimen name="text_size_xxxlarge">60sp</dimen>  
+</resources>

@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/commom_bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/commontitlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/view_common_titlebar" />
+
+    <LinearLayout
+        android:id="@+id/ll_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commontitlebar"
+        android:background="@color/commom_bg_color"
+        android:textColor="@color/black"
+        android:orientation="vertical"
+        android:padding="5dp" >
+        
+		<RelativeLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+	         android:background="@color/gray"
+	         android:orientation="horizontal" >
+		</RelativeLayout>
+		
+        <LinearLayout
+            android:id="@+id/ll_power"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android1:layout_gravity="center_vertical"
+            android:background="@color/commom_bg_color"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            	android:layout_gravity="center_vertical"
+			    android:contentDescription="@null"
+                android:src="@drawable/item_poweron" />
+
+            <RadioGroup
+                android1:id="@+id/rg_power"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android1:id="@+id/rb_power_on"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:checked="true"
+                    android1:text="打开" />
+
+                <RadioButton
+                    android1:id="@+id/rb_power_off"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:text="关闭" />
+            </RadioGroup>
+        </LinearLayout>
+        
+		<RelativeLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+	         android:background="@color/gray"
+	         android:orientation="horizontal" >
+		</RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android1:layout_gravity="center_vertical"
+            android:background="@color/commom_bg_color"
+            android:orientation="horizontal" 
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iv_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            	android:layout_gravity="center_vertical"
+                android:contentDescription="@null"
+                android:src="@drawable/item_mode_cool" />
+
+            <RadioGroup
+                android1:id="@+id/rg_mode"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android1:id="@+id/rb_mode_auto"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:checked="true"
+                    android1:text="自动" />
+
+                <RadioButton
+                    android1:id="@+id/rb_mode_cool"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:text="冷气" />
+                
+                <RadioButton
+                    android1:id="@+id/rb_mode_wet"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:text="除湿" />
+
+                <RadioButton
+                    android1:id="@+id/rb_mode_wind"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:text="送风" />
+                
+                <RadioButton
+                    android1:id="@+id/rb_mode_hot"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:text="暖气" />
+            </RadioGroup>
+        </LinearLayout>
+        
+		<RelativeLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+	         android:background="@color/gray"
+	         android:orientation="horizontal" 
+            android:visibility="gone" >
+		</RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_swing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android1:layout_gravity="center_vertical"
+            android:background="@color/commom_bg_color"
+            android:orientation="horizontal"  
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iv_swing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            	android:layout_gravity="center_vertical"
+                android:contentDescription="@null"
+                android:src="@drawable/item_swing_on" />
+
+            <RadioGroup
+                android1:id="@+id/rg_swing"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android1:id="@+id/rb_swing_on"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:checked="true"
+                    android1:text="打开" />
+
+                <RadioButton
+                    android1:id="@+id/rb_swing_off"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:text="关闭" />
+            </RadioGroup>
+        </LinearLayout>
+        
+		<RelativeLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+	         android:background="@color/gray"
+	         android:orientation="horizontal" 
+            android:visibility="gone" >
+		</RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_volume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android1:layout_gravity="center_vertical"
+            android:background="@color/commom_bg_color"
+            android:orientation="horizontal"  
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iv_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            	android:layout_gravity="center_vertical"
+                android:contentDescription="@null"
+                android:src="@drawable/item_volume_middle" />
+
+            <RadioGroup
+                android1:id="@+id/rg_volume"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android1:id="@+id/rb_volume_auto"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:checked="true"
+                    android1:text="自动" />
+
+                <RadioButton
+                    android1:id="@+id/rb_volume_small"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:text="小风" />
+               
+                <RadioButton
+                    android1:id="@+id/rb_volume_middle"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:text="中风" />
+               
+                <RadioButton
+                    android1:id="@+id/rb_volume_big"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:text="大风" />
+               
+            </RadioGroup>
+        </LinearLayout>     
+        
+		<RelativeLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+	         android:background="@color/gray"
+	         android:orientation="horizontal" 
+            android:visibility="gone" >
+		</RelativeLayout>   
+        
+        <RelativeLayout
+            android:id="@+id/ll_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android1:layout_gravity="center_vertical"
+            android:background="@color/commom_bg_color"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android1:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/item_temp" />
+
+            <TextView
+                android:id="@+id/tv_temperature"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/iv_temperature"
+                android1:layout_centerVertical="true"
+                android:text="26"
+                android:textSize="@dimen/text_size_midnormal"
+                android:textColor="@color/black"
+                android1:layout_marginLeft="10dp"
+                android:visibility="visible" />
+			
+			<Spinner
+			    android:id="@+id/sp_temperature"
+			    android:layout_width="50dp"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_vertical"
+			    android:layout_toRightOf="@id/tv_temperature"
+			    android1:layout_centerVertical="true"
+				android:popupBackground="@color/gray"
+                android:textSize="@dimen/text_size_midnormal"
+			    android1:layout_marginLeft="10dp"
+			    android:visibility="gone" />
+			
+		    <ImageView
+		        android:id="@+id/img_temperature"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_alignParentRight="true"
+	            android:contentDescription="@null"
+	            android:scaleType="centerCrop"
+	            android:layout_marginRight="@dimen/listitem_user_icon_horizaontal_padding"
+	            android:src="@drawable/smp_more"
+	            android:visibility="visible" />
+			
+        </RelativeLayout>
+        
+		<RelativeLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+	         android:background="@color/gray"
+	         android:orientation="horizontal" >
+		</RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android1:layout_gravity="center_vertical"
+            android:background="@color/commom_bg_color"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            	android:layout_gravity="center_vertical"
+                android:src="@drawable/item_period" />
+
+            <CheckBox
+                android1:id="@+id/cb_peroid_7"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android1:text="日" />
+            
+            <CheckBox
+                android1:id="@+id/cb_peroid_1"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android1:text="一" />
+            
+            <CheckBox
+                android1:id="@+id/cb_peroid_2"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android1:text="二" />
+
+            <CheckBox
+                android1:id="@+id/cb_peroid_3"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android1:text="三" />
+
+            <CheckBox
+                android1:id="@+id/cb_peroid_4"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android1:text="四" />
+            
+            <CheckBox
+                android1:id="@+id/cb_peroid_5"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android1:text="五" />
+            
+            <CheckBox
+                android1:id="@+id/cb_peroid_6"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android1:text="六" />
+
+        </LinearLayout>
+        
+		<RelativeLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+	         android:background="@color/gray"
+	         android:orientation="horizontal" >
+		</RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android1:layout_gravity="center_vertical"
+            android:background="@color/commom_bg_color"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            	android:layout_gravity="center_vertical"
+                android:src="@drawable/item_alarm" />
+
+            <TextView
+                android1:id="@+id/tv_alarm"
+                android1:layout_width="wrap_content"
+                android1:layout_height="wrap_content"
+                android1:layout_gravity="center_vertical"
+                android1:layout_marginLeft="10dp"
+                android:text="12:00:00"
+                android:textSize="@dimen/text_size_midnormal"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+        
+		<RelativeLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+	         android:background="@color/gray"
+	         android:orientation="horizontal" >
+		</RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_enable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android1:layout_gravity="center_vertical"
+            android:background="@color/commom_bg_color"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_enable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            	android:layout_gravity="center_vertical"
+                android:src="@drawable/item_enable_on" />
+
+           <RadioGroup
+               android1:id="@+id/rg_enable"
+               android1:layout_width="wrap_content"
+               android1:layout_height="wrap_content"
+               android1:layout_gravity="center_vertical"
+               android:orientation="horizontal" >
+
+                <RadioButton
+                    android1:id="@+id/rb_enable_on"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:checked="true"
+                    android1:text="使能" />
+
+                <RadioButton
+                    android1:id="@+id/rb_enable_off"
+                    android1:layout_width="wrap_content"
+                    android1:layout_height="wrap_content"
+        			android:textColor="@color/black"
+                    android1:text="不使能" />
+               
+            </RadioGroup>
+
+        </LinearLayout>
+        
+		<RelativeLayout
+	         android:layout_width="match_parent"
+	         android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+	         android:background="@color/gray"
+	         android:orientation="horizontal" >
+		</RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android1:layout_gravity="center_vertical"
+            android:background="@color/commom_bg_color"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_deletescene"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_selector"
+                android:text="删除"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_larsamll" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

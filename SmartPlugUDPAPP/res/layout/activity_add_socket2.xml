@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">  
+    <include
+          android:id="@+id/commontitlebar"  
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          layout="@layout/view_common_titlebar"/>  
+
+	    <ListView
+	        android:id="@+id/listView"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+			android:divider="@color/lightwhite"
+	        android:dividerHeight="1px"
+	        android:fastScrollEnabled="true" >
+	  
+	    </ListView>  
+	    <!-- Button
+	    	    tools:listitem="@layout/item_plug_list"	     
+	      		android:id="@+id/btn_next_step"
+	       		android:layout_width="match_parent"
+	       		android:layout_height="wrap_content"
+	       		android:layout_marginTop="15dp" 
+	       		android:layout_gravity="center"
+	       		android:text="@string/str_next_step" 
+	       		android:textColor="@color/white"
+	       		android:textSize="@dimen/text_size_larsamll"
+	       		android:background="@drawable/btn_selector" /-->
+  
+</LinearLayout>  
